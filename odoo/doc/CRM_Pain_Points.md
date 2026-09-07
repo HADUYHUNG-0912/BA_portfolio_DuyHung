@@ -2,7 +2,7 @@
 
 > **Mục tiêu tài liệu:** Chỉ lưu giữ những **điểm đau THỰC SỰ CHƯA ĐƯỢC ODOO GIẢI QUYẾT MẶC ĐỊNH**, đòi hỏi BA Leader phải can thiệp cấu hình hoặc thiết lập quy chế cho doanh nghiệp.  
 > *(Các điểm đau mà Odoo 19 đã giải quyết sẵn như tính năng chống ngâm deal Rotting và chống trùng lead đã được lược bỏ khỏi danh sách này).*  
-> **Tài liệu liên quan:** [case.md](./case.md) | [Sơ đồ Swimlane (PNG)](../diagram/CRM_Lead_To_Order_Swimlane_Process.png)
+> **Tài liệu liên quan:** [Case_Study_Odoo.md](./Case_Study_Odoo.md) | [Sơ đồ Swimlane (PNG)](../diagram/CRM_Lead_To_Order_Swimlane_Process.png)
 
 ---
 

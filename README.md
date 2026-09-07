@@ -76,11 +76,9 @@ odoo/
 │   ├── CRM_Lead_To_Order_Swimlane_Process.png
 │   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png
 │   └── CRM_System_Use_Case_Overview.png
-└── doc/                           # Hồ sơ đặc tả 14 quy tắc nghiệp vụ và 3 tình huống thực chiến
-    ├── Business_Rules_Analysis.md # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
-    ├── case.md                    # Tình huống M3: Tối ưu Pipeline và SLA cảnh báo 14 ngày
-    ├── case_module_4.md           # Tình huống M4: Phân bổ xoay vòng Round-Robin và chống cướp khách
-    └── case_module_5.md           # Tình huống M5: Mô hình doanh thu lai và kiểm soát deal trôi dạt
+└── doc/                           # Hồ sơ đặc tả 14 quy tắc nghiệp vụ và tổng hợp tình huống thực chiến
+    ├── Case_Study_Odoo.md         # Bản tổng hợp 3 tình huống nghiệp vụ thực chiến cấp doanh nghiệp
+    └── Business_Rules_Analysis.md # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
 ```
 
 ### 3 Điểm Nhấn Nghiệp Vụ Cốt Lõi Được Giải Quyết:

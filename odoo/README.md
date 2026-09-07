@@ -1,7 +1,7 @@
 # Nghiên Cứu Tình Huống: Tối Ưu Vận Hành Bán Hàng & Odoo ERP
 
 > Đánh giá dự án từ góc nhìn người phỏng vấn  
-> Ứng viên: Hà Duy Hùng - Trọng tâm: Business Analyst chuyên mảng ERP và SaaS  
+> Ứng viên: Hà Duy Hưng - Trọng tâm: Business Analyst chuyên mảng ERP và SaaS  
 > Mục tiêu: Tái cấu trúc chu trình Lead-to-Order, thiết lập 14 quy tắc nghiệp vụ và giải quyết bài toán cấp điều hành  
 
 ---
@@ -26,9 +26,9 @@ Dự án này thể hiện rõ tư duy phân tích nghiệp vụ thực chiến 
 
 | Tình huống thực tế | Điểm nghẽn quản trị | Giải pháp nghiệp vụ của BA | Giá trị đạt được |
 | :--- | :--- | :--- | :--- |
-| **Tình huống M3: Quản trị Pipeline & SLA 14 ngày** [Xem chi tiết case.md](./doc/case.md) | Nhân viên ngâm cơ hội quá hạn làm sai lệch dự báo doanh thu, bấm đóng cơ hội thua bừa bãi không rõ lý do. | Kích hoạt cảnh báo đổi màu thẻ sau 14 ngày trên Kanban, áp dụng nguyên lý Poka-Yoke bắt buộc chọn lý do thất bại theo danh mục chuẩn. | 100% cơ hội thất bại có dữ liệu nguyên nhân, cấp quản lý nhận diện ngay điểm nghẽn bán hàng. |
-| **Tình huống M4: Phân bổ tự động & Chống cướp khách** [Xem chi tiết case_module_4.md](./doc/case_module_4.md) | Tranh giành khách hàng ở khối bán lẻ, nhân viên khối doanh nghiệp giấu thông tin vào sổ tay riêng vì sợ mất khách nội bộ. | Cơ chế phân bổ xoay vòng tự động kèm hạn mức 5 lead mỗi ngày, kết hợp ma trận phân quyền 3 cấp và kỹ thuật che số điện thoại hoặc email. | Xóa bỏ xung đột giữa các nhóm kinh doanh, loại trừ hoàn toàn nguy cơ rò rỉ dữ liệu khi nhân sự nghỉ việc. |
-| **Tình huống M5: Doanh thu lai & Kiểm soát deal trôi dạt** [Xem chi tiết case_module_5.md](./doc/case_module_5.md) | Hợp đồng hỗn hợp vừa bán đứt vừa có phí thuê bao hàng tháng, nhân viên liên tục dời ngày chốt cơ hội sang tháng sau để né phạt chỉ tiêu. | Tách biệt hai khối dữ liệu doanh thu một lần và doanh thu định kỳ hàng tháng, thiết lập bộ đếm tự động bật cờ cảnh báo khi dời ngày chốt từ 2 lần trở lên. | Giúp Giám đốc Tài chính chủ động thanh khoản tiền mặt, cung cấp số liệu tăng trưởng doanh thu định kỳ thời gian thực. |
+| **Tình huống M3: Quản trị Pipeline & SLA 14 ngày** [Xem chi tiết](./doc/Case_Study_Odoo.md#case-study-1-quản-trị-pipeline-thiết-lập-sla-14-ngày--chuẩn-hóa-lý-do-thua) | Nhân viên ngâm cơ hội quá hạn làm sai lệch dự báo doanh thu, bấm đóng cơ hội thua bừa bãi không rõ lý do. | Kích hoạt cảnh báo đổi màu thẻ sau 14 ngày trên Kanban, áp dụng nguyên lý Poka-Yoke bắt buộc chọn lý do thất bại theo danh mục chuẩn. | 100% cơ hội thất bại có dữ liệu nguyên nhân, cấp quản lý nhận diện ngay điểm nghẽn bán hàng. |
+| **Tình huống M4: Phân bổ tự động & Chống cướp khách** [Xem chi tiết](./doc/Case_Study_Odoo.md#case-study-2-phân-bổ-lead-tự-động-round-robin--cơ-chế-chống-cướp-khách-nội-bộ) | Tranh giành khách hàng ở khối bán lẻ, nhân viên khối doanh nghiệp giấu thông tin vào sổ tay riêng vì sợ mất khách nội bộ. | Cơ chế phân bổ xoay vòng tự động kèm hạn mức 5 lead mỗi ngày, kết hợp ma trận phân quyền 3 cấp và kỹ thuật che số điện thoại hoặc email. | Xóa bỏ xung đột giữa các nhóm kinh doanh, loại trừ hoàn toàn nguy cơ rò rỉ dữ liệu khi nhân sự nghỉ việc. |
+| **Tình huống M5: Doanh thu lai & Kiểm soát deal trôi dạt** [Xem chi tiết](./doc/Case_Study_Odoo.md#case-study-3-doanh-thu-lai-và-kiểm-soát-deal-trôi-dạt-bằng-cờ-cảnh-báo) | Hợp đồng hỗn hợp vừa bán đứt vừa có phí thuê bao hàng tháng, nhân viên liên tục dời ngày chốt cơ hội sang tháng sau để né phạt chỉ tiêu. | Tách biệt hai khối dữ liệu doanh thu một lần và doanh thu định kỳ hàng tháng, thiết lập bộ đếm tự động bật cờ cảnh báo khi dời ngày chốt từ 2 lần trở lên. | Giúp Giám đốc Tài chính chủ động thanh khoản tiền mặt, cung cấp số liệu tăng trưởng doanh thu định kỳ thời gian thực. |
 
 ---
 
@@ -55,10 +55,8 @@ odoo/
 │   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png      # Sơ đồ phân bổ Lead và chống cướp khách
 │   └── CRM_System_Use_Case_Overview.png               # Sơ đồ Use Case tổng quan phân hệ CRM
 └── doc/                                               # Hồ sơ phân tích nghiệp vụ và tài liệu giải pháp
+    ├── Case_Study_Odoo.md                             # Bản tổng hợp 3 tình huống thực chiến kinh điển
     ├── Business_Rules_Analysis.md                     # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
-    ├── case.md                                        # Tình huống M3 về tối ưu Pipeline và SLA 14 ngày
-    ├── case_module_4.md                               # Tình huống M4 về phân bổ tự động và chống cướp khách
-    ├── case_module_5.md                               # Tình huống M5 về doanh thu lai và kiểm soát deal trôi dạt
     ├── CRM_Architecture_ASCII.md                      # Kiến trúc phân tầng năng lực chức năng CRM
     ├── CRM_Pain_Points.md                             # Ma trận điểm đau và giải pháp khắc phục
     ├── BA_Master_Learning_Plan.md                     # Khung lộ trình năng lực chuyên viên phân tích nghiệp vụ
