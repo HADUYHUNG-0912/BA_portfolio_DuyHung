@@ -1,97 +1,113 @@
-# CHƯƠNG TRÌNH ĐÀO TẠO CHUYÊN VIÊN PHÂN TÍCH NGHIỆP VỤ ERP (ODOO BA LEADER)
+# HA DUY HUNG | BUSINESS ANALYST PORTFOLIO
 
-> **Dự án:** Hệ thống Tri thức, Nghiệp vụ Doanh nghiệp & Giải quyết Tình huống Thực chiến (Odoo ERP)  
-> **Phương pháp luận:** Chuẩn nghiệp vụ Quốc tế + Tư vấn Giải pháp Fit-Gap + Huấn luyện viên AI 24/7  
-> **Trọng tâm đào tạo:** Nắm vững quy trình kinh doanh thực tế, bóc tách bài toán nghiệp vụ (Pain Points), cấu hình giải pháp trên Odoo (No-Code UI), viết tài liệu chuẩn BA (FSD, User Stories, UAT) và giải quyết các case study từ Ban Giám đốc (C-Level).  
-> **Trạng thái hiện tại:** **Giai đoạn 1 (Lead-to-Order & Bán hàng)** — Đã hoàn thành 5/8 Module CRM (62.5% GĐ1); chuẩn bị bước sang **Module 6: Tự động hóa & Tích hợp (Automation & Omnichannel)**.
+<p align="center">
+  <a href="https://linkedin.com/in/haduyhung"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:haduyhung0912@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://github.com/HADUYHUNG-0912"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <img src="https://img.shields.io/badge/GPA-3.68%2F4.0-brightgreen?style=for-the-badge" alt="GPA">
+  <img src="https://img.shields.io/badge/TOEIC-795%2F990-blue?style=for-the-badge" alt="TOEIC">
+</p>
 
 ---
 
-## 🧭 BẢN ĐỒ CẤU TRÚC & ĐIỀU HƯỚNG TÀI LIỆU (DOCUMENTATION INDEX)
+## 👨‍💼 About Me
 
-Toàn bộ hệ thống tài liệu trong dự án được tổ chức và phân loại thành **4 phân khu chuyên biệt cho BA**:
+Third-year **Management Information Systems (MIS)** student with hands-on **Business Analyst** experience across a live corporate internship and multiple software projects that shipped working prototypes.
+
+* 📍 **Location:** Ho Chi Minh City, Vietnam  
+* 📞 **Phone:** (+84) 797 069 812  
+* ✉️ **Email:** [haduyhung0912@gmail.com](mailto:haduyhung0912@gmail.com)  
+* 🔗 **LinkedIn:** [linkedin.com/in/haduyhung](https://linkedin.com/in/haduyhung)  
+* 🐙 **GitHub:** [github.com/HADUYHUNG-0912](https://github.com/HADUYHUNG-0912)  
+
+### 🎯 Career Objective
+Currently a **Business Analyst Intern at Vado Sport**, supporting real-world BA documentation and testing workflows. Led business requirements analysis, ERD & SQL database design, and use case / UX flow documentation on system-design projects delivered as functioning applications by engineering teams. Over the next 3 years, aiming to grow into a solid **Business Analyst** role within software/web product development (**SaaS, E-commerce, Enterprise ERP**), owning requirements-to-delivery processes end to end.
+
+---
+
+## 🎓 Education
+
+### **University of Transport Ho Chi Minh City** *(Expected 2028)*
+* **Degree:** Bachelor's Degree in Management Information Systems (MIS)
+* **Cumulative GPA:** **3.68 / 4.0**
+
+---
+
+## 🛠️ Core Competencies & Skills Toolkit
+
+| Domain | Key Skills & Capabilities |
+| :--- | :--- |
+| **Requirements Engineering** | Business Requirements Gathering & Analysis, Elicitation (Questionnaires, Stakeholder Interviews), BRD/FRD/SRS/URD Authoring, Acceptance Criteria (AC), Test Case Design |
+| **Process & System Modeling** | Business Process Mapping (BPMN / Cross-Functional Swimlane), Context Diagrams, Flowcharts, Use Case Diagramming & Specifications, UX Flow Mapping |
+| **Data & Database Architecture** | Entity-Relationship Diagram (ERD), Normalized Data Modeling (3NF), SQL Database Schema Design (DDL/DML, Foreign Keys, Indexing), Data Analysis |
+| **Tools & Platforms** | Draw.io, Figma (Wireframing & Prototyping), JIRA (Sprint Planning, AI Workflow Automation), Git/GitHub, Enterprise ERP (Odoo 19) |
+| **Languages & Communication** | **English:** TOEIC **795 / 990** \| **Vietnamese:** Native |
+
+---
+
+## 💼 Work Experience & Projects
+
+### 1. 🏢 Business Analyst Intern — Vado Sport *(2026 – Present)*
+* **URD Validation & Consistency:** Reviewed and validated the User Requirement Document (URD) for the *SvAuthentic AI Poster Generator* project (authored primarily by the BA lead), checking business rules and acceptance criteria across **6 core screens** for consistency before dev handoff.
+* **Test Case Engineering:** Authored **54 test cases** directly derived from URD acceptance criteria, covering template selection, asset upload validation, and AI poster generation flows, providing the dev team a reliable verification baseline.
+* **Stakeholder Elicitation:** Designed a structured requirements questionnaire to collect business needs directly from stakeholders, standardizing input gathering prior to requirement drafting.
+* **Cross-Functional Coordination:** Supported communication between BA lead and development team to maintain requirement clarity and eliminate ambiguities throughout the project lifecycle.
+
+---
+
+### 2. 🐎 Business Analyst & Project Lead — Horse Racing Management System *(May 2026)*
+* **Team Leadership & Agile Execution:** Led a **7-member team**, managing task backlogs and sprint progress in JIRA.
+* **AI & Workflow Automation:** Configured an AI agent to automate JIRA and GitHub workflows via API, streamlining issue tracking and repository management.
+* **Requirements Specification (SRS):** Authored the System Requirements Specification (SRS), establishing functional requirements and system constraints.
+* **Process Modeling:** Designed flowcharts and context diagrams to map system scope and operational logic.
+* **End-to-End Delivery:** Delivered a working prototype, coordinating requirements, tooling, and team execution from concept to deployment.
+
+---
+
+### 3. 🎓 Business Analyst — Course & Student Management System (English Center) *(March 2026)*
+* **Workflow & Gap Analysis:** Led BA activities in a **4-person team** building a student enrollment and course-scheduling system; analyzed workflows to define functional specs and address operational bottlenecks.
+* **Data Modeling:** Designed a comprehensive **20+ entity ERD** in Draw.io for a normalized, scalable relational database.
+* **Database Implementation:** Built the SQL schema, defining tables, constraints, primary/foreign keys, and data relationships.
+* **Dev Alignment & Delivery:** Handed off requirement specs and data models to the engineering team; successfully shipped as a functioning prototype.
+
+---
+
+## 🌟 Featured Enterprise Case Study: Odoo ERP CRM & Sales Engineering
+
+> 📌 **Direct Link to Project Artifacts:** [Explore the Odoo Case Study Directory (./odoo/)](./odoo/)
+
+A deep-dive enterprise analysis project on **Odoo ERP (v19.0)** focusing on the **Lead-to-Order** lifecycle, business rules specification, and executive problem solving.
 
 ```
-e:\BA\Ba-case\odoo\odoo\
-│
-├── README.md                                 # Bản đồ điều hướng & Tổng quan lộ trình đào tạo BA
-│
-├── doc/                                      # Thư mục Tài liệu Nghiệp vụ & Lộ trình Học tập
-│   │
-│   ├── [1. QUẢN LÝ TIẾN ĐỘ & LỘ TRÌNH ĐÀO TẠO]
-│   ├── BA_Master_Learning_Plan.md            # Lộ trình 3 giai đoạn đào tạo BA Chuyên nghiệp
-│   ├── Learning_Checklist.md                 # Bảng Checklist kỹ năng & nghiệp vụ từng module
-│   ├── CRM_Learning_Progress.md              # Nhật ký học tập, bảng điểm & tiến trình 8 module CRM
-│   │
-│   ├── [2. NGHIỆP VỤ & CASE STUDY THỰC CHIẾN]
-│   ├── case.md                               # Case Study M3: Tối ưu Pipeline, SLA 14 ngày & Chuẩn hóa lý do thua
-│   ├── case_module_4.md                      # Case Study M4: Phân bổ Lead Round-Robin, Ma trận 3 cấp & Chống cướp khách
-│   ├── case_module_5.md                      # Case Study M5: Doanh thu lai One-off + MRR, Bật cờ Slipping Deals & Dashboard
-│   ├── CRM_Pain_Points.md                    # Ma trận Điểm đau thực tế & Phương án tư vấn của BA
-│   │
-│   └── [3. KHUNG QUY TẮC NGHIỆP VỤ & KIẾN TRÚC CHỨC NĂNG]
-│       ├── CRM_Architecture_ASCII.md         # Sơ đồ kiến trúc chức năng & dòng chảy thông tin Odoo CRM
-│       └── Business_Rules_Analysis.md        # Cẩm nang 14 Quy tắc Nghiệp vụ cốt lõi (Business Rules Spec)
-│
-├── diagram/                                  # Thư mục Sơ đồ Quy trình Nghiệp vụ (Process Flowcharts)
-│   ├── CRM_Lifecycle_Swimlane.md             # Thuyết minh quy trình Swimlane 4 làn bơi chuẩn nghiệp vụ
-│   ├── crm-lifecycle-swimlane.svg            # Sơ đồ vector độ nét tuyệt đối (SVG)
-│   ├── crm-lifecycle-swimlane.puml           # Mã nguồn PlantUML sơ đồ quy trình Swimlane
-│   ├── Lead_Assignment_Decision_Flow.md      # Thuyết minh Sơ đồ Quyết định Phân bổ Lead & Chống cướp khách
-│   ├── lead-assignment-antipoaching.svg      # Sơ đồ Quyết định M4 vector sắc nét (SVG)
-│   ├── lead-assignment-antipoaching.puml     # Mã nguồn PlantUML sơ đồ quyết định M4
-│   ├── png/                                  # Thư mục chứa ảnh xuất ra định dạng PNG độ nét cao
-│   │   ├── crm-lifecycle-swimlane.png        # Sơ đồ Swimlane độ nét cao (PNG)
-│   │   ├── crm-usecase.png                   # Sơ đồ Use Case tổng quan (PNG)
-│   │   └── lead-assignment-antipoaching.png  # Sơ đồ Quyết định M4 độ nét cao (PNG)
-│   └── render_diagram.py                     # Script hỗ trợ xuất ảnh sơ đồ
-│
-└── odoo/                                     # Môi trường tham chiếu cấu hình chuẩn Odoo 19
+odoo/
+├── README.md                      # Executive summary & Interviewer assessment
+├── diagram/                       # High-resolution process diagrams (PNG)
+│   ├── CRM_Lead_To_Order_Swimlane_Process.png
+│   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png
+│   └── CRM_System_Use_Case_Overview.png
+└── doc/                           # Comprehensive business analysis documents
+    ├── Business_Rules_Analysis.md # 14 core business rules specifications
+    ├── case.md                    # Case M3: Pipeline optimization & 14-day rotting SLA
+    ├── case_module_4.md           # Case M4: Round-Robin auto-assignment & Anti-poaching
+    └── case_module_5.md           # Case M5: Hybrid revenue (One-off + MRR) & Slipping deals
 ```
 
----
+### Key Business Problems Solved in this Case Study:
+1. **Preventing Stagnant Deals (Anti-Rotting SLA):** Formulated a 14-day visual rotting indicator on Kanban and built a Poka-Yoke constraint enforcing structured lost reasons for sales loss analysis.
+2. **Fair Distribution & Anti-Poaching:** Designed a Round-Robin auto-assignment algorithm with a 5 leads/day capacity quota and solved internal poaching through data masking and a 3-tier role security matrix.
+3. **Hybrid Revenue Forecasting:** Architected dual tracking for One-off implementation fees vs. Monthly Recurring Revenue (MRR) and introduced automated Slipping Deal flags (`reschedule_count >= 2`) to protect cash flow forecasting.
 
-## 📂 CHI TIẾT 4 PHÂN KHU TÀI LIỆU CHO BA
-
-### 1. 🧭 Lộ trình & Quản lý Học tập (Roadmaps & Learning Logs)
-* 📘 [BA_Master_Learning_Plan.md](file:///e:/BA/Ba-case/odoo/odoo/doc/BA_Master_Learning_Plan.md): Khung phương pháp học "4T-AI" dành riêng cho BA, lộ trình 3 giai đoạn từ Bán hàng (Lead-to-Order) $\rightarrow$ Chuỗi cung ứng & Kho (P2P & Kho) $\rightarrow$ Tài chính & Tư vấn Triển khai ERP.
-* 📋 [Learning_Checklist.md](file:///e:/BA/Ba-case/odoo/odoo/doc/Learning_Checklist.md): Bảng kiểm soát năng lực BA theo từng module, theo dõi tiến độ hoàn thành các Business Rules và bộ sản phẩm bàn giao (Deliverables).
-* 📝 [CRM_Learning_Progress.md](file:///e:/BA/Ba-case/odoo/odoo/doc/CRM_Learning_Progress.md): Nhật ký học tập từng phiên, điểm số các bài kiểm tra nghiệp vụ và ghi nhận năng lực giải quyết tình huống thực tế.
-
-### 2. 💼 Nghiệp vụ BA & Case Study Thực chiến (Business Analysis & Case Studies)
-* 📑 [case.md](file:///e:/BA/Ba-case/odoo/odoo/doc/case.md): Bản tư vấn giải pháp cho Giám đốc Kinh doanh (CCO) xử lý tình trạng nhân viên ngâm deal quá hạn và đóng deal không ghi nhận nguyên nhân.
-* 🎯 [CRM_Pain_Points.md](file:///e:/BA/Ba-case/odoo/odoo/doc/CRM_Pain_Points.md): Ma trận phân tích điểm đau thực tế tại doanh nghiệp (thiếu cảnh báo vượt cấp Escalation, lỗ hổng đóng deal) và giải pháp khắc phục từ BA.
-
-### 3. ⚙️ Khung Quy tắc Nghiệp vụ & Kiến trúc Chức năng (Business Rules & Capabilities)
-* 🏛️ [CRM_Architecture_ASCII.md](file:///e:/BA/Ba-case/odoo/odoo/doc/CRM_Architecture_ASCII.md): Bản đồ phân tầng chức năng Odoo CRM theo góc nhìn nghiệp vụ: Vai trò người dùng $\rightarrow$ Màn hình thao tác $\rightarrow$ Năng lực nghiệp vụ $\rightarrow$ Tự động hóa & Báo cáo.
-* 🔍 [Business_Rules_Analysis.md](file:///e:/BA/Ba-case/odoo/odoo/doc/Business_Rules_Analysis.md): Cẩm nang 14 nhóm Quy tắc nghiệp vụ kinh điển (Thẩm định dữ liệu, Công thức tính toán, Luồng phê duyệt, Ma trận phân quyền, SLA tự động...).
-
-### 4. 🎨 Mô hình hóa Quy trình Nghiệp vụ (Business Process Flowcharts)
-* 📄 [diagram/CRM_Lifecycle_Swimlane.md](diagram/CRM_Lifecycle_Swimlane.md): Thuyết minh toàn diện quy trình 4 làn bơi (Khách hàng, Nhân viên kinh doanh, Hệ thống Odoo, Cấp Quản lý).
-  * Ảnh trực quan: [Vector SVG](diagram/crm-lifecycle-swimlane.svg) | [Ảnh PNG](diagram/png/crm-lifecycle-swimlane.png) | [Mã nguồn PlantUML](diagram/crm-lifecycle-swimlane.puml) | [Bản vẽ Draw.io](diagram/crm-lifecycle-swimlane.drawio)
-* 🔀 [diagram/Lead_Assignment_Decision_Flow.md](diagram/Lead_Assignment_Decision_Flow.md): Sơ đồ Quyết định Phân bổ Lead tự động Round-Robin, Kiểm soát Quota và Cơ chế Chống cướp khách chuẩn Odoo 19.
-  * Ảnh trực quan: [Vector SVG](diagram/lead-assignment-antipoaching.svg) | [Ảnh PNG](diagram/png/lead-assignment-antipoaching.png) | [Mã nguồn PlantUML](diagram/lead-assignment-antipoaching.puml) | [Bản vẽ Draw.io](diagram/lead-assignment-antipoaching.drawio)
-* 🎯 [diagram/CRM_UseCase_Overview.md](diagram/CRM_UseCase_Overview.md): Sơ đồ Use Case tổng quan phân hệ CRM (System Scope, 4 Actor, 18 Use Case và phân loại Odoo Standard vs Fit-Gap).
-  * Ảnh trực quan: [Vector SVG](diagram/crm-usecase.svg) | [Ảnh PNG](diagram/png/crm-usecase.png) | [Mã nguồn PlantUML](diagram/crm-usecase.puml)
+👉 **[Read the complete Odoo Case Study & Review Sơ đồ Nghiệp vụ](./odoo/)**
 
 ---
 
-## 📊 BẢNG THEO DÕI TIẾN ĐỘ NHANH (QUICK STATUS)
+## 📜 Certifications
 
-| Hạng mục | Tiến độ | Đánh giá | Trọng tâm nghiệp vụ tiếp theo |
-| :--- | :---: | :---: | :--- |
-| **Giai đoạn 1: Lead-to-Order** | **62.5%** | Xuất sắc (TB 9.0/10) | Tự động hóa tác vụ & Tích hợp đa kênh (**Module 6**) |
-| **Giai đoạn 2: Chuỗi cung ứng & Kho** | **0%** | Kế hoạch tiếp theo | Nghiệp vụ luồng Mua hàng (P2P), Kho kép và đối soát 3 bên |
-| **Giai đoạn 3: Tài chính & Tư vấn ERP** | **0%** | Kế hoạch tiếp theo | Cơ chế hạch toán tự động, Phân tích Fit-Gap và Quản trị dự án ERP |
+* 🏅 **IT Business Analyst** — Udemy Certificate of Completion
+* 🏅 **Google Data Analytics Professional Certificate** — Coursera
 
 ---
 
-## 🗄️ LỊCH SỬ THAY ĐỔI DỰ ÁN (CHANGELOG)
-
-| Phiên bản | Ngày | Người cập nhật | Nội dung cập nhật |
-| :---: | :---: | :---: | :--- |
-| **v1.0** | 2026-09-02 | AI Trainer | Khởi tạo khung tài liệu dự án Odoo CRM. |
-| **v2.0** | 2026-09-04 | Lead BA & AI | Nghiệm thu Module 3 CRM (3 deliverables: Sơ đồ Swimlane, Case Study, Ma trận điểm đau). |
-| **v2.1** | 2026-09-05 | Lead BA & AI | **Tái cấu trúc 100% tài liệu bám sát Role BA Nghiệp vụ**: Loại bỏ hoàn toàn định hướng đọc code kỹ thuật; tập trung tối đa vào tư duy phân tích nghiệp vụ, quy trình doanh nghiệp và giải quyết Case Study thực chiến. |
-| **v2.2** | 2026-09-06 | Lead BA & AI | **Nghiệm thu hoàn thành Module 4 CRM**: Xuất bản `doc/case_module_4.md`, hoàn thiện phân bổ Round-Robin & ma trận phân quyền; nâng tiến độ Giai đoạn 1 lên 50% (Điểm TB 8.6/10). |
-| **v2.3** | 2026-09-06 | Lead BA & AI | **Nghiệm thu hoàn thành Module 5 CRM**: Xuất bản `doc/case_module_5.md`, giải quyết bài toán Hybrid Deals & Slipping Deals; nâng tiến độ GĐ1 lên 62.5% (Điểm TB 9.0/10). |
+<p align="center">
+  <i>Open to Business Analyst / Associate BA opportunities. Feel free to connect via <a href="mailto:haduyhung0912@gmail.com">Email</a> or <a href="https://linkedin.com/in/haduyhung">LinkedIn</a>!</i>
+</p>

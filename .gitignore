@@ -1,9 +1,3 @@
-# Bỏ qua toàn bộ mã nguồn framework Odoo gốc (chỉ lưu trữ sản phẩm BA)
-odoo/
-
-# Tài liệu nghiệp vụ nội bộ (giữ lại theo yêu cầu, chưa đưa lên)
-doc/
-
 # Python cache & temporary files
 __pycache__/
 *.pyc
