@@ -1,71 +1,71 @@
-# Odoo ERP Case Study: CRM & Sales Engineering
+# Nghiên Cứu Tình Huống: Tối Ưu Vận Hành Bán Hàng & Odoo ERP
 
-> **Assessor Overview & Project Breakdown**  
-> **Candidate:** Ha Duy Hung | **Target Role:** Business Analyst (Enterprise ERP / SaaS)  
-> **Core Focus:** Lead-to-Order Architecture, Business Rules Specification & C-Level Problem Solving  
-
----
-
-## 🎯 Executive Summary (Interviewer Perspective)
-
-This directory contains an enterprise-level Business Analysis case study on **Odoo ERP (v19.0)**. Rather than approaching software through standard feature checklists, this project demonstrates end-to-end systems thinking: re-engineering cross-functional workflows, implementing system guardrails (Poka-Yoke), resolving organizational conflicts, and safeguarding cash flow forecasting.
+> Đánh giá dự án từ góc nhìn người phỏng vấn  
+> Ứng viên: Hà Duy Hùng - Trọng tâm: Business Analyst chuyên mảng ERP và SaaS  
+> Mục tiêu: Tái cấu trúc chu trình Lead-to-Order, thiết lập 14 quy tắc nghiệp vụ và giải quyết bài toán cấp điều hành  
 
 ---
 
-## 🚀 What Was Accomplished
+## 🎯 Đánh Giá Nhanh Của Người Phỏng Vấn
 
-### 1. Business Process Re-Engineering & Modeling
-* **Lead-to-Order Swimlane (4 Lanes):** Mapped explicit operational boundaries across *Customer*, *Sales Rep*, *Odoo Core*, and *Sales Management*. ([View Diagram](./diagram/CRM_Lead_To_Order_Swimlane_Process.png))
-* **Automated Lead Assignment & Anti-Poaching:** Designed a Round-Robin distribution model with a 5-lead/day capacity quota and leave-status synchronization. ([View Diagram](./diagram/CRM_Auto_Assignment_Anti_Poaching_Flow.png))
-* **System Scope & Use Case Architecture:** Formulated 18 Use Cases across 4 Actor groups, separating Odoo Standard capabilities from custom Fit-Gap logic. ([View Diagram](./diagram/CRM_System_Use_Case_Overview.png))
+Dự án này thể hiện rõ tư duy phân tích nghiệp vụ thực chiến cấp doanh nghiệp. Thay vì chỉ tiếp cận phần mềm theo danh sách tính năng thông thường, ứng viên đi thẳng vào giải quyết các điểm nghẽn quản trị cốt lõi của Ban Giám đốc: chuẩn hóa dòng chảy dữ liệu bán hàng, ngăn chặn lỗi vận hành bằng cơ chế hệ thống, xóa bỏ tranh chấp nội bộ và bảo vệ độ chính xác của dự báo dòng tiền.
 
-### 2. 14 Core Business Rules Framework ([doc/Business_Rules_Analysis.md](./doc/Business_Rules_Analysis.md))
-* Detailed specifications across 5 foundational pillars: Data Validation, Computed Values, Approval Gates, 3-Tier Security Matrix, and Automated Escalation Paths.
+---
 
-### 3. C-Level Executive Problem Solving
+## 🚀 Những Gì Đã Làm Được
 
-| Case Study | Problem / Operational Bottleneck | BA Solution & System Mechanism | Business Impact |
+### 1. Chuẩn hóa và Mô hình hóa Quy trình Nghiệp vụ
+* **Quy trình Lead-to-Order với 4 làn bơi:** Phân định ranh giới trách nhiệm rõ ràng giữa Khách hàng, Nhân viên kinh doanh, Hệ thống Odoo và Quản lý bán hàng. [Xem sơ đồ quy trình Swimlane](./diagram/CRM_Lead_To_Order_Swimlane_Process.png)
+* **Phân bổ Lead tự động và chống cướp khách:** Thiết lập thuật toán phân bổ xoay vòng Round-Robin kèm hạn mức 5 lead mỗi ngày cho từng nhân sự và tự động đồng bộ theo trạng thái nghỉ phép. [Xem sơ đồ phân bổ Lead và chống cướp khách](./diagram/CRM_Auto_Assignment_Anti_Poaching_Flow.png)
+* **Kiến trúc Use Case hệ thống:** Xây dựng 18 ca sử dụng bao phủ 4 nhóm tác nhân, phân định minh bạch giữa tính năng tiêu chuẩn và giải pháp tùy biến may đo. [Xem sơ đồ Use Case tổng quan](./diagram/CRM_System_Use_Case_Overview.png)
+
+### 2. Khung 14 Quy Tắc Nghiệp Vụ Cốt Lõi [Xem chi tiết tại doc/Business_Rules_Analysis.md](./doc/Business_Rules_Analysis.md)
+* Đặc tả chi tiết 14 nhóm quy tắc trọng yếu: Ràng buộc tính hợp lệ của dữ liệu, công thức tính toán tự động, cổng phê duyệt nhiều cấp, ma trận bảo mật 3 cấp và cơ chế cảnh báo vượt cấp tự động.
+
+### 3. Giải Quyết 3 Bài Toán Quản Trị Từ Cấp Điều Hành
+
+| Tình huống thực tế | Điểm nghẽn quản trị | Giải pháp nghiệp vụ của BA | Giá trị đạt được |
 | :--- | :--- | :--- | :--- |
-| **Case M3: Pipeline & Rotting SLA** ([case.md](./doc/case.md)) | Reps hoarding stale deals, distorting revenue forecasts; closing deals as Lost without valid reasons. | • 14-day Kanban rotting visual cue.<br>• Poka-Yoke constraint enforcing structured lost reason selection. | 100% loss transparency; instant bottleneck detection for CCO. |
-| **Case M4: Anti-Poaching & Security** ([case_module_4.md](./doc/case_module_4.md)) | Internal lead fighting in B2C; B2B reps hiding client contact info in personal notebooks out of poaching fears. | • Round-Robin + 5 leads/day quota.<br>• 3-tier access matrix + automated Phone/Email Data Masking. | Eliminated internal friction; zero data leakage upon employee departure. |
-| **Case M5: Hybrid Revenue & Slipping Deals** ([case_module_5.md](./doc/case_module_5.md)) | Complex contracts (One-off + MRR); reps sliding deal dates across months to evade KPI penalties. | • Dual-tracking for One-off vs. Recurring Revenue.<br>• Reschedule counter (`count >= 2`) triggering Slipping Deal Flag. | Protected CFO cash flow planning; real-time visibility into net New MRR. |
+| **Tình huống M3: Quản trị Pipeline & SLA 14 ngày** [Xem chi tiết case.md](./doc/case.md) | Nhân viên ngâm cơ hội quá hạn làm sai lệch dự báo doanh thu, bấm đóng cơ hội thua bừa bãi không rõ lý do. | Kích hoạt cảnh báo đổi màu thẻ sau 14 ngày trên Kanban, áp dụng nguyên lý Poka-Yoke bắt buộc chọn lý do thất bại theo danh mục chuẩn. | 100% cơ hội thất bại có dữ liệu nguyên nhân, cấp quản lý nhận diện ngay điểm nghẽn bán hàng. |
+| **Tình huống M4: Phân bổ tự động & Chống cướp khách** [Xem chi tiết case_module_4.md](./doc/case_module_4.md) | Tranh giành khách hàng ở khối bán lẻ, nhân viên khối doanh nghiệp giấu thông tin vào sổ tay riêng vì sợ mất khách nội bộ. | Cơ chế phân bổ xoay vòng tự động kèm hạn mức 5 lead mỗi ngày, kết hợp ma trận phân quyền 3 cấp và kỹ thuật che số điện thoại hoặc email. | Xóa bỏ xung đột giữa các nhóm kinh doanh, loại trừ hoàn toàn nguy cơ rò rỉ dữ liệu khi nhân sự nghỉ việc. |
+| **Tình huống M5: Doanh thu lai & Kiểm soát deal trôi dạt** [Xem chi tiết case_module_5.md](./doc/case_module_5.md) | Hợp đồng hỗn hợp vừa bán đứt vừa có phí thuê bao hàng tháng, nhân viên liên tục dời ngày chốt cơ hội sang tháng sau để né phạt chỉ tiêu. | Tách biệt hai khối dữ liệu doanh thu một lần và doanh thu định kỳ hàng tháng, thiết lập bộ đếm tự động bật cờ cảnh báo khi dời ngày chốt từ 2 lần trở lên. | Giúp Giám đốc Tài chính chủ động thanh khoản tiền mặt, cung cấp số liệu tăng trưởng doanh thu định kỳ thời gian thực. |
 
 ---
 
-## 💡 Key Business Insights
+## 💡 Insight Nghiệp Vụ Thực Chiến
 
-1. **System Guardrails (Poka-Yoke) Over Administrative Policy:**  
-   Managerial reminders fail without software enforcement. Blocking status progression until mandatory structured reasons are captured and activating visual rotting cues eliminate operational debt without managerial micromanagement.
+1. **Kỷ luật hệ thống Poka-Yoke thay vì mệnh lệnh hành chính:**  
+   Mệnh lệnh nhắc nhở miệng rất dễ bị lãng quên trong vận hành thực tế. Giải pháp BA hiệu quả nhất là đưa rào chắn trực tiếp vào phần mềm: khóa nút chuyển trạng thái khi chưa điền lý do, tự động đổi màu thẻ cảnh báo khi vượt ngưỡng thời gian. Hệ thống tự động vận hành chuẩn mực mà không tiêu tốn công sức giám sát thủ công.
 
-2. **Balancing Operational Transparency with Asset Security:**  
-   In multi-team B2B sales, unrestricted access invites internal poaching, while complete data silos create duplicate customer profiles. Implementing **Partial Data Masking** allows reps to verify duplicate accounts while strictly securing contact details and quotes.
+2. **Cân bằng tinh tế giữa vận hành mở và bảo mật dữ liệu:**  
+   Trong kinh doanh B2B, nếu khóa kín dữ liệu thì nhân viên sẽ tạo trùng khách hàng và giẫm chân nhau, còn nếu mở hoàn toàn thì dễ xảy ra tình trạng cướp khách nội bộ. Ứng dụng giải pháp che dữ liệu số điện thoại và email giúp nhân viên nhận biết khách hàng đã có người chăm sóc mà vẫn bảo vệ tuyệt đối thông tin liên hệ.
 
-3. **Multi-Layered Financial Realism in B2B Contracts:**  
-   Treating hybrid contracts as a single lump-sum figure blinds leadership to liquidity risks. Decoupling upfront deployment revenue from Monthly Recurring Revenue (MRR) provides CFOs with reliable cash runway visibility while giving CCOs clean subscriber growth metrics.
+3. **Minh bạch hóa doanh thu lai để bảo vệ dòng tiền:**  
+   Gộp chung doanh thu triển khai một lần và doanh thu thuê bao định kỳ vào một con số tổng sẽ làm sai lệch bức tranh tài chính. Tách biệt hai luồng tiền giúp Giám đốc Tài chính chủ động nguồn vốn lưu động, đồng thời giúp Giám đốc Kinh doanh đánh giá chính xác giá trị vòng đời khách hàng.
 
 ---
 
-## 📁 Repository Directory Structure
+## 📁 Cấu Trúc Thư Mục Lưu Trữ
 
 ```
 odoo/
-├── README.md                                          # Executive summary & assessment overview
-├── diagram/                                           # High-resolution visual process models (PNG)
-│   ├── CRM_Lead_To_Order_Swimlane_Process.png         # [PNG] Cross-functional 4-swimlane workflow
-│   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png      # [PNG] Round-Robin & anti-poaching decision tree
-│   └── CRM_System_Use_Case_Overview.png               # [PNG] CRM functional capability matrix
-└── doc/                                               # Business specifications & case studies
-    ├── Business_Rules_Analysis.md                     # 14 enterprise business rules catalog
-    ├── case.md                                        # M3: Pipeline & Rotting SLA case study
-    ├── case_module_4.md                               # M4: Assignment & Anti-poaching case study
-    ├── case_module_5.md                               # M5: Hybrid revenue & Slipping deals case study
-    ├── CRM_Architecture_ASCII.md                      # Functional capability hierarchy
-    ├── CRM_Pain_Points.md                             # Unresolved ERP gaps & fit-gap matrix
-    ├── BA_Master_Learning_Plan.md                     # 3-phase BA competency roadmap
-    ├── CRM_Learning_Progress.md                       # Evaluation logs & scoring rubrics
-    └── Learning_Checklist.md                          # Practical skill verification checklist
+├── README.md                                          # Bản tổng hợp đánh giá nghiệp vụ
+├── diagram/                                           # Bộ sơ đồ quy trình chất lượng cao định dạng PNG
+│   ├── CRM_Lead_To_Order_Swimlane_Process.png         # Sơ đồ 4 làn bơi luồng Lead-to-Order
+│   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png      # Sơ đồ phân bổ Lead và chống cướp khách
+│   └── CRM_System_Use_Case_Overview.png               # Sơ đồ Use Case tổng quan phân hệ CRM
+└── doc/                                               # Hồ sơ phân tích nghiệp vụ và tài liệu giải pháp
+    ├── Business_Rules_Analysis.md                     # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
+    ├── case.md                                        # Tình huống M3 về tối ưu Pipeline và SLA 14 ngày
+    ├── case_module_4.md                               # Tình huống M4 về phân bổ tự động và chống cướp khách
+    ├── case_module_5.md                               # Tình huống M5 về doanh thu lai và kiểm soát deal trôi dạt
+    ├── CRM_Architecture_ASCII.md                      # Kiến trúc phân tầng năng lực chức năng CRM
+    ├── CRM_Pain_Points.md                             # Ma trận điểm đau và giải pháp khắc phục
+    ├── BA_Master_Learning_Plan.md                     # Khung lộ trình năng lực chuyên viên phân tích nghiệp vụ
+    ├── CRM_Learning_Progress.md                       # Nhật ký đánh giá và bảng điểm tiến độ
+    └── Learning_Checklist.md                          # Danh mục kiểm tra kỹ năng thực hành
 ```
 
 ---
 
-> ⬅️ **Back to Master Portfolio:** [Portfolio Homepage (Root README)](../README.md)
+> ⬅️ **Quay lại trang hồ sơ cá nhân:** [Trang chủ Portfolio](../README.md)

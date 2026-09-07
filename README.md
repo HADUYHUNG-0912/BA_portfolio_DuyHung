@@ -1,113 +1,102 @@
-# HA DUY HUNG | BUSINESS ANALYST PORTFOLIO
+# HÀ DUY HÙNG - HỒ SƠ NĂNG LỰC BUSINESS ANALYST
 
-<p align="center">
-  <a href="https://linkedin.com/in/haduyhung"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:haduyhung0912@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://github.com/HADUYHUNG-0912"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <img src="https://img.shields.io/badge/GPA-3.68%2F4.0-brightgreen?style=for-the-badge" alt="GPA">
-  <img src="https://img.shields.io/badge/TOEIC-795%2F990-blue?style=for-the-badge" alt="TOEIC">
-</p>
+**Chuyên viên Phân tích Nghiệp vụ | Hệ thống Thông tin Quản lý**  
+Thành phố Hồ Chí Minh | Điện thoại: +84 797 069 812 | Email: haduyhung0912@gmail.com  
+Hồ sơ LinkedIn: [linkedin.com/in/haduyhung](https://linkedin.com/in/haduyhung) | Kho lưu trữ GitHub: [github.com/HADUYHUNG-0912](https://github.com/HADUYHUNG-0912)
 
 ---
 
-## 👨‍💼 About Me
+## 👨‍💼 Giới Thiệu Bản Thân & Định Hướng Nghề Nghiệp
 
-Third-year **Management Information Systems (MIS)** student with hands-on **Business Analyst** experience across a live corporate internship and multiple software projects that shipped working prototypes.
+Sinh viên năm thứ ba chuyên ngành Hệ thống Thông tin Quản lý với nền tảng phân tích nghiệp vụ thực chiến qua kỳ thực tập doanh nghiệp và hai dự án phát triển phần mềm đã bàn giao sản phẩm chạy thực tế. Hiện đang là Thực tập sinh Business Analyst tại Vado Sport, trực tiếp tham gia hoàn thiện tài liệu nghiệp vụ và thiết kế kịch bản kiểm thử. 
 
-* 📍 **Location:** Ho Chi Minh City, Vietnam  
-* 📞 **Phone:** (+84) 797 069 812  
-* ✉️ **Email:** [haduyhung0912@gmail.com](mailto:haduyhung0912@gmail.com)  
-* 🔗 **LinkedIn:** [linkedin.com/in/haduyhung](https://linkedin.com/in/haduyhung)  
-* 🐙 **GitHub:** [github.com/HADUYHUNG-0912](https://github.com/HADUYHUNG-0912)  
-
-### 🎯 Career Objective
-Currently a **Business Analyst Intern at Vado Sport**, supporting real-world BA documentation and testing workflows. Led business requirements analysis, ERD & SQL database design, and use case / UX flow documentation on system-design projects delivered as functioning applications by engineering teams. Over the next 3 years, aiming to grow into a solid **Business Analyst** role within software/web product development (**SaaS, E-commerce, Enterprise ERP**), owning requirements-to-delivery processes end to end.
+Đã từng làm chủ quy trình phân tích yêu cầu kinh doanh, thiết kế mô hình dữ liệu quan hệ ERD, xây dựng lược đồ cơ sở dữ liệu SQL và tài liệu hóa luồng người dùng Use Case cho các dự án chuyển giao thành công tới đội ngũ lập trình. Định hướng trong 3 năm tới là phát triển thành một Business Analyst nòng cốt trong lĩnh vực sản phẩm công nghệ phần mềm SaaS, E-commerce và Enterprise ERP, làm chủ toàn diện chu trình từ khâu khơi gợi yêu cầu đến khi nghiệm thu bàn giao sản phẩm.
 
 ---
 
-## 🎓 Education
+## 🎓 Học Vấn & Năng Lực Học Thuật
 
-### **University of Transport Ho Chi Minh City** *(Expected 2028)*
-* **Degree:** Bachelor's Degree in Management Information Systems (MIS)
-* **Cumulative GPA:** **3.68 / 4.0**
+### Trường Đại học Giao thông Vận tải Thành phố Hồ Chí Minh
+* Bằng Cử nhân Hệ thống Thông tin Quản lý - MIS
+* Thời gian dự kiến tốt nghiệp: Năm 2028
+* Điểm trung bình tích lũy: **3.68 / 4.0**
+* Trình độ ngoại ngữ: Tiếng Anh đạt chứng chỉ **TOEIC 795 / 990**
 
 ---
 
-## 🛠️ Core Competencies & Skills Toolkit
+## 🛠️ Năng Lực Cốt Lõi & Hộp Công Cụ Chuyên Môn
 
-| Domain | Key Skills & Capabilities |
+| Lĩnh vực chuyên môn | Kỹ năng & Năng lực thực hành cụ thể |
 | :--- | :--- |
-| **Requirements Engineering** | Business Requirements Gathering & Analysis, Elicitation (Questionnaires, Stakeholder Interviews), BRD/FRD/SRS/URD Authoring, Acceptance Criteria (AC), Test Case Design |
-| **Process & System Modeling** | Business Process Mapping (BPMN / Cross-Functional Swimlane), Context Diagrams, Flowcharts, Use Case Diagramming & Specifications, UX Flow Mapping |
-| **Data & Database Architecture** | Entity-Relationship Diagram (ERD), Normalized Data Modeling (3NF), SQL Database Schema Design (DDL/DML, Foreign Keys, Indexing), Data Analysis |
-| **Tools & Platforms** | Draw.io, Figma (Wireframing & Prototyping), JIRA (Sprint Planning, AI Workflow Automation), Git/GitHub, Enterprise ERP (Odoo 19) |
-| **Languages & Communication** | **English:** TOEIC **795 / 990** \| **Vietnamese:** Native |
+| **Kỹ thuật yêu cầu phần mềm** | Khơi gợi và thu thập yêu cầu từ các bên liên quan, thiết kế bảng câu hỏi khảo sát nghiệp vụ, biên soạn tài liệu URD, SRS, BRD, FRD, thiết kế tiêu chí nghiệm thu và xây dựng kịch bản kiểm thử chi tiết |
+| **Mô hình hóa quy trình & hệ thống** | Thiết kế sơ đồ dòng chảy nghiệp vụ, sơ đồ làn bơi Swimlane, sơ đồ ngữ cảnh hệ thống, sơ đồ Use Case và ánh xạ hành trình trải nghiệm người dùng |
+| **Kiến trúc dữ liệu & Cơ sở dữ liệu** | Xây dựng mô hình thực thể quan hệ ERD chuẩn hóa trên 20 bảng, thiết kế lược đồ cơ sở dữ liệu SQL gồm khóa chính, khóa ngoại, ràng buộc toàn vẹn và phân tích dữ liệu |
+| **Công cụ & Nền tảng công nghệ** | Phần mềm Draw.io, công cụ thiết kế giao diện Figma, quản lý tiến độ dự án JIRA, quản lý mã nguồn Git và nền tảng quản trị doanh nghiệp Odoo 19 |
+| **Giao tiếp & Ngoại ngữ** | Tiếng Anh TOEIC 795/990 đáp ứng xuất sắc việc nghiên cứu tài liệu kỹ thuật quốc tế và trao đổi nghiệp vụ |
 
 ---
 
-## 💼 Work Experience & Projects
+## 💼 Kinh Nghiệm Thực Tế & Dự Án Đã Bàn Giao
 
-### 1. 🏢 Business Analyst Intern — Vado Sport *(2026 – Present)*
-* **URD Validation & Consistency:** Reviewed and validated the User Requirement Document (URD) for the *SvAuthentic AI Poster Generator* project (authored primarily by the BA lead), checking business rules and acceptance criteria across **6 core screens** for consistency before dev handoff.
-* **Test Case Engineering:** Authored **54 test cases** directly derived from URD acceptance criteria, covering template selection, asset upload validation, and AI poster generation flows, providing the dev team a reliable verification baseline.
-* **Stakeholder Elicitation:** Designed a structured requirements questionnaire to collect business needs directly from stakeholders, standardizing input gathering prior to requirement drafting.
-* **Cross-Functional Coordination:** Supported communication between BA lead and development team to maintain requirement clarity and eliminate ambiguities throughout the project lifecycle.
-
----
-
-### 2. 🐎 Business Analyst & Project Lead — Horse Racing Management System *(May 2026)*
-* **Team Leadership & Agile Execution:** Led a **7-member team**, managing task backlogs and sprint progress in JIRA.
-* **AI & Workflow Automation:** Configured an AI agent to automate JIRA and GitHub workflows via API, streamlining issue tracking and repository management.
-* **Requirements Specification (SRS):** Authored the System Requirements Specification (SRS), establishing functional requirements and system constraints.
-* **Process Modeling:** Designed flowcharts and context diagrams to map system scope and operational logic.
-* **End-to-End Delivery:** Delivered a working prototype, coordinating requirements, tooling, and team execution from concept to deployment.
+### 1. Thực tập sinh Business Analyst tại Vado Sport - Giai đoạn từ 2026 đến Hiện tại
+* **Thẩm định tài liệu nghiệp vụ:** Độc lập rà soát và kiểm tra tính nhất quán của tài liệu yêu cầu người dùng URD cho dự án Trình tạo áp phích bằng trí tuệ nhân tạo SvAuthentic, đối soát chặt chẽ quy tắc nghiệp vụ và tiêu chí nghiệm thu trên 6 màn hình chức năng trước khi bàn giao cho đội ngũ lập trình.
+* **Xây dựng kịch bản kiểm thử:** Biên soạn bộ 54 kịch bản kiểm thử bám sát tiêu chí nghiệm thu, bao phủ toàn diện luồng chọn mẫu thiết kế, tải lên tài nguyên đồ họa và xử lý kết xuất áp phích tự động.
+* **Chuẩn hóa khâu thu thập yêu cầu:** Thiết kế bảng câu hỏi khảo sát có cấu trúc chuyên nghiệp để làm việc trực tiếp với các bên liên quan, chuẩn hóa dữ liệu đầu vào trước khi tiến hành viết đặc tả.
+* **Phối hợp liên chức năng:** Đóng vai trò cầu nối thông tin giữa chuyên viên phân tích nghiệp vụ chính và đội ngũ phát triển nhằm đảm bảo sự rõ ràng, không sai lệch yêu cầu xuyên suốt vòng đời dự án.
 
 ---
 
-### 3. 🎓 Business Analyst — Course & Student Management System (English Center) *(March 2026)*
-* **Workflow & Gap Analysis:** Led BA activities in a **4-person team** building a student enrollment and course-scheduling system; analyzed workflows to define functional specs and address operational bottlenecks.
-* **Data Modeling:** Designed a comprehensive **20+ entity ERD** in Draw.io for a normalized, scalable relational database.
-* **Database Implementation:** Built the SQL schema, defining tables, constraints, primary/foreign keys, and data relationships.
-* **Dev Alignment & Delivery:** Handed off requirement specs and data models to the engineering team; successfully shipped as a functioning prototype.
+### 2. Business Analyst kiêm Trưởng nhóm Dự án - Hệ Thống Quản Lý Đua Ngựa - Tháng 5 năm 2026
+* **Quản trị đội ngũ & Tiến độ:** Dẫn dắt nhóm 7 thành viên, trực tiếp phân bổ đầu việc và kiểm soát chất lượng bàn giao từng chu kỳ phát triển trên JIRA.
+* **Tự động hóa luồng làm việc:** Thiết lập trợ lý trí tuệ nhân tạo tự động hóa quy trình giữa JIRA và GitHub qua giao diện kết nối API, tối ưu hóa việc theo dõi lỗi và quản trị kho lưu trữ.
+* **Đặc tả yêu cầu phần mềm:** Soạn thảo tài liệu SRS định nghĩa toàn diện yêu cầu chức năng, yêu cầu phi chức năng và giới hạn phạm vi hệ thống.
+* **Mô hình hóa hệ thống:** Trực tiếp vẽ sơ đồ ngữ cảnh và sơ đồ luồng dữ liệu để trực quan hóa logic nghiệp vụ phức tạp.
+* **Nghiệm thu sản phẩm:** Điều phối nguồn lực và bàn giao thành công phiên bản sản phẩm chạy thử nghiệm hoàn chỉnh theo đúng kế hoạch.
 
 ---
 
-## 🌟 Featured Enterprise Case Study: Odoo ERP CRM & Sales Engineering
+### 3. Business Analyst - Hệ Thống Quản Lý Khóa Học & Học Viên Trung Tâm Anh Ngữ - Tháng 3 năm 2026
+* **Phân tích hiện trạng & Khoảng trống:** Đảm nhiệm vai trò phân tích nghiệp vụ chính trong nhóm 4 thành viên xây dựng hệ thống ghi danh và xếp lịch học, khảo sát luồng thao tác thực tế để bóc tách các điểm nghẽn vận hành.
+* **Thiết kế mô hình dữ liệu lớn:** Thiết kế sơ đồ thực thể quan hệ ERD quy mô trên 20 bảng chuẩn hóa trên công cụ Draw.io, đảm bảo tính mở rộng và toàn vẹn dữ liệu.
+* **Hiện thực hóa cơ sở dữ liệu:** Viết mã lệnh thiết kế lược đồ cơ sở dữ liệu SQL, thiết lập bảng, kiểu dữ liệu, các ràng buộc và mối quan hệ khóa ngoại.
+* **Chuyển giao và bàn giao:** Bàn giao hồ sơ đặc tả và mô hình dữ liệu cho đội ngũ lập trình, hỗ trợ giải đáp nghiệp vụ và phát hành sản phẩm chạy thực tế.
 
-> 📌 **Direct Link to Project Artifacts:** [Explore the Odoo Case Study Directory (./odoo/)](./odoo/)
+---
 
-A deep-dive enterprise analysis project on **Odoo ERP (v19.0)** focusing on the **Lead-to-Order** lifecycle, business rules specification, and executive problem solving.
+## 🌟 Dự Án Tiêu Biểu: Nghiên Cứu & Tư Vấn Giải Pháp Odoo ERP
+
+> 📌 **Truy cập tài liệu dự án chi tiết:** [Khám phá thư mục Odoo ERP](./odoo/)
+
+Dự án phân tích nghiệp vụ chuyên sâu về phân hệ Quản trị quan hệ khách hàng và Tối ưu hóa chu trình bán hàng trên nền tảng Odoo 19:
 
 ```
 odoo/
-├── README.md                      # Executive summary & Interviewer assessment
-├── diagram/                       # High-resolution process diagrams (PNG)
+├── README.md                      # Báo cáo đánh giá tổng quan từ góc nhìn người phỏng vấn
+├── diagram/                       # Bộ sơ đồ quy trình nghiệp vụ độ nét cao dạng PNG
 │   ├── CRM_Lead_To_Order_Swimlane_Process.png
 │   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png
 │   └── CRM_System_Use_Case_Overview.png
-└── doc/                           # Comprehensive business analysis documents
-    ├── Business_Rules_Analysis.md # 14 core business rules specifications
-    ├── case.md                    # Case M3: Pipeline optimization & 14-day rotting SLA
-    ├── case_module_4.md           # Case M4: Round-Robin auto-assignment & Anti-poaching
-    └── case_module_5.md           # Case M5: Hybrid revenue (One-off + MRR) & Slipping deals
+└── doc/                           # Hồ sơ đặc tả 14 quy tắc nghiệp vụ và 3 tình huống thực chiến
+    ├── Business_Rules_Analysis.md # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
+    ├── case.md                    # Tình huống M3: Tối ưu Pipeline và SLA cảnh báo 14 ngày
+    ├── case_module_4.md           # Tình huống M4: Phân bổ xoay vòng Round-Robin và chống cướp khách
+    └── case_module_5.md           # Tình huống M5: Mô hình doanh thu lai và kiểm soát deal trôi dạt
 ```
 
-### Key Business Problems Solved in this Case Study:
-1. **Preventing Stagnant Deals (Anti-Rotting SLA):** Formulated a 14-day visual rotting indicator on Kanban and built a Poka-Yoke constraint enforcing structured lost reasons for sales loss analysis.
-2. **Fair Distribution & Anti-Poaching:** Designed a Round-Robin auto-assignment algorithm with a 5 leads/day capacity quota and solved internal poaching through data masking and a 3-tier role security matrix.
-3. **Hybrid Revenue Forecasting:** Architected dual tracking for One-off implementation fees vs. Monthly Recurring Revenue (MRR) and introduced automated Slipping Deal flags (`reschedule_count >= 2`) to protect cash flow forecasting.
+### 3 Điểm Nhấn Nghiệp Vụ Cốt Lõi Được Giải Quyết:
+1. **Dập tắt tình trạng ngâm cơ hội bán hàng:** Thiết lập mốc cảnh báo đổi màu trực quan sau 14 ngày trên bảng Kanban và áp dụng cơ chế Poka-Yoke khóa thao tác nếu không điền lý do thua chuẩn hóa.
+2. **Xóa bỏ tranh chấp và chống cướp khách nội bộ:** Thiết kế thuật toán phân bổ xoay vòng tự động kèm hạn mức 5 lead mỗi ngày và triển khai giải pháp che dữ liệu liên hệ kết hợp phân quyền 3 cấp.
+3. **Chính xác hóa dự báo dòng tiền cho cấp điều hành:** Tách biệt độc lập doanh thu bán đứt một lần và doanh thu định kỳ hàng tháng, kích hoạt cờ cảnh báo tự động khi phát hiện cơ hội bị dời ngày chốt từ 2 lần trở lên.
 
-👉 **[Read the complete Odoo Case Study & Review Sơ đồ Nghiệp vụ](./odoo/)**
-
----
-
-## 📜 Certifications
-
-* 🏅 **IT Business Analyst** — Udemy Certificate of Completion
-* 🏅 **Google Data Analytics Professional Certificate** — Coursera
+👉 **[Đọc toàn bộ hồ sơ đánh giá và sơ đồ quy trình tại thư mục Odoo](./odoo/)**
 
 ---
 
-<p align="center">
-  <i>Open to Business Analyst / Associate BA opportunities. Feel free to connect via <a href="mailto:haduyhung0912@gmail.com">Email</a> or <a href="https://linkedin.com/in/haduyhung">LinkedIn</a>!</i>
-</p>
+## 📜 Chứng Chỉ Chuyên Môn Quốc Tế
+
+* **Chứng chỉ Chuyên viên Phân tích Nghiệp vụ CNTT** - Nền tảng đào tạo Udemy
+* **Chứng chỉ Chuyên nghiệp Phân tích Dữ liệu Google** - Nền tảng Coursera
+
+---
+
+*Sẵn sàng đón nhận các cơ hội nghề nghiệp vị trí Business Analyst hoặc Associate BA. Trân trọng kết nối qua email haduyhung0912@gmail.com hoặc LinkedIn!*
