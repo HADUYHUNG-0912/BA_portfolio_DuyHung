@@ -1,0 +1,123 @@
+@startuml
+!theme plain
+skinparam DefaultFontName "Segoe UI", "Noto Sans", Arial, sans-serif
+skinparam TitleFontSize 22
+skinparam TitleFontStyle bold
+skinparam DefaultFontSize 13
+skinparam RoundCorner 10
+skinparam Shadowing false
+skinparam ArrowThickness 1.5
+skinparam ArrowColor #37474F
+skinparam ActorBorderThickness 1.5
+
+' Định dạng cho Package và Boundary
+skinparam packageStyle rectangle
+skinparam rectangle {
+    BorderColor #455A64
+    BorderThickness 2
+    BackgroundColor #FAFAFA
+}
+skinparam package {
+    BorderColor #78909C
+    BorderThickness 1.5
+    BackgroundColor #F5F7F8
+    FontStyle bold
+    FontSize 14
+}
+
+' Định dạng cho Use Case
+skinparam usecase {
+    BorderThickness 1.5
+    BorderColor #546E7A
+    FontSize 12
+    ArrowFontSize 11
+}
+
+title SƠ ĐỒ USE CASE TỔNG QUAN HỆ THỐNG ODOO CRM (TECHCORP)
+
+left to right direction
+
+' ================= ACTORS (NGOÀI HỆ THỐNG) =================
+actor "Nhân viên Bán hàng\n(Sales Representative)" as SalesRep #EDE7F6
+actor "Chuyên viên Marketing\n(Marketing Executive)" as Marketing #E8F5E9
+actor "Quản lý Kinh doanh\n(Sales Manager / CCO)" as SalesMgr #FCE4EC
+actor "Hệ thống Tác vụ Ngầm\n(Odoo Cron Engine)" as OdooCron #E1F5FE
+
+' ================= SYSTEM BOUNDARY =================
+rectangle "Hệ thống Odoo CRM (TechCorp Scope)" as OdooCRM {
+
+    ' ----- PACKAGE 1: THU THẬP & TIẾP NHẬN LEAD -----
+    package "1. Thu thập & Tiếp nhận Lead (Lead Acquisition)" as P1 {
+        usecase "UC01: Nhập Lead thủ công\n(Manual Lead Entry)" as UC01 #E3F2FD
+        usecase "UC02: Thu thập Lead qua Web Form / Ads\n(Capture Leads via Web/Ads)" as UC02 #E3F2FD
+        usecase "UC03: Nhập danh sách Lead hàng loạt\n(Import Leads from Excel/CSV)" as UC03 #E3F2FD
+    }
+
+    ' ----- PACKAGE 2: ĐỊNH TUYẾN & CHỐNG CƯỚP KHÁCH -----
+    package "2. Định tuyến & Chống cướp khách (Lead Routing & Protection)" as P2 {
+        usecase "UC04: Phân bổ Lead Round-Robin & Quota\n(Auto-assign Leads by Capacity)" as UC04 #E3F2FD
+        usecase "UC05: Tra cứu & Kiểm tra trùng lặp\n(Lookup & Deduplication: MST/SĐT)" as UC05 #E3F2FD
+        usecase "UC06: Yêu cầu Phối hợp Bán hàng\n[Fit-Gap: Active <60d & Data Masking]" as UC06 #FFF3E0
+        usecase "UC07: Yêu cầu Tiếp quản Khách nhàn rỗi\n[Fit-Gap: Dormant Account >60d]" as UC07 #FFF3E0
+    }
+
+    ' ----- PACKAGE 3: THỰC THI CƠ HỘI BÁN HÀNG -----
+    package "3. Thực thi Cơ hội Bán hàng (Pipeline Execution)" as P3 {
+        usecase "UC08: Thẩm định BANT & Chuyển đổi Cơ hội\n(Convert Lead to Opportunity)" as UC08 #E3F2FD
+        usecase "UC09: Lập & Gửi Báo giá Bán hàng\n(Create & Send Quotation)" as UC09 #E3F2FD
+        usecase "UC10: Đóng Deal Thắng (Mark as Won)\n[Kích hoạt Sales Order]" as UC10 #E3F2FD
+        usecase "UC11: Đóng Deal Thua (Mark as Lost)\n[Poka-Yoke Constraint]" as UC11 #E3F2FD
+        usecase "UC12: Chọn Lý do Thua chuẩn hóa\n(Select crm.lost.reason)" as UC12 #E3F2FD
+        usecase "UC13: Ghi chú Giải trình chi tiết\n[Fit-Gap: Bắt buộc khi chọn Lý do Khác]" as UC13 #FFF3E0
+    }
+
+    ' ----- PACKAGE 4: GIÁM SÁT & QUẢN TRỊ -----
+    package "4. Giám sát & Quản trị (Supervision & Governance)" as P4 {
+        usecase "UC14: Duyệt Ngoại lệ Phân bổ & Tiếp quản\n[Fit-Gap: Manager phê duyệt trong 48h]" as UC14 #FFF3E0
+        usecase "UC15: Giám sát Phễu & Xử lý Deal Ngâm\n(Monitor Pipeline & Rotting SLA 14d)" as UC15 #E3F2FD
+        usecase "UC16: Phân tích Thua & Báo cáo KPI\n(Lost Opportunity Analysis & BI)" as UC16 #E3F2FD
+        usecase "UC17: Quét Cảnh báo Deal Ngâm Rotting\n(Automated Rotting SLA Scanner)" as UC17 #E3F2FD
+        usecase "UC18: Tự động Kích hoạt Đơn Bán Hàng\n[Quy trình liên thông khi Won]" as UC18 #FFF3E0
+    }
+}
+
+' ================= ACTOR ASSOCIATIONS (NÉT KHÔNG HƯỚNG --) =================
+Marketing -- UC02
+Marketing -- UC03
+
+SalesRep -- UC01
+SalesRep -- UC05
+SalesRep -- UC06
+SalesRep -- UC07
+SalesRep -- UC08
+SalesRep -- UC09
+SalesRep -- UC10
+SalesRep -- UC11
+
+SalesMgr -- UC14
+SalesMgr -- UC15
+SalesMgr -- UC16
+
+OdooCron -- UC04
+OdooCron -- UC17
+OdooCron -- UC18
+
+' ================= UML RELATIONSHIPS (<<include>> & <<extend>>) =================
+UC08 ..> UC05 : <<include>>
+UC11 ..> UC12 : <<include>>
+UC10 ..> UC18 : <<include>>
+
+UC06 ..> UC05 : <<extend>>
+UC07 ..> UC05 : <<extend>>
+UC13 ..> UC12 : <<extend>>
+
+' ================= CHÚ THÍCH (LEGEND) =================
+legend bottom right
+  <#ghost>| <b>KÝ HIỆU & CHUẨN NGUỒN GỐC</b> |
+  |<#E3F2FD>   | <b>Tính năng Odoo 19 Standard</b> (Đã có sẵn trong mã nguồn Odoo gốc) |
+  |<#FFF3E0>   | <b>Tính năng Tùy biến Fit-Gap TechCorp</b> (Yêu cầu đặc thù trong tài liệu dự án) |
+  |<#37474F> <b>--</b> | <b>Tham gia tác vụ (Actor Association)</b> (Nét liền không hướng chuẩn UML) |
+  |<#37474F> <b>..></b> | <b>Quan hệ Phụ thuộc UML</b> (<<include>>: Bắt buộc thực thi / <<extend>>: Mở rộng có điều kiện) |
+endlegend
+
+@enduml

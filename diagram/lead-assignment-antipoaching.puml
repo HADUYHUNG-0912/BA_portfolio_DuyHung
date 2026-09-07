@@ -1,0 +1,90 @@
+@startuml
+!theme plain
+skinparam DefaultFontName "Segoe UI", "Noto Sans", Arial, sans-serif
+skinparam TitleFontSize 20
+skinparam TitleFontStyle bold
+skinparam DefaultFontSize 13
+skinparam ActivityFontSize 13
+skinparam ActivityDiamondFontSize 12
+skinparam ArrowFontSize 11
+skinparam ActivityBorderThickness 1.5
+skinparam ArrowThickness 1.5
+skinparam RoundCorner 8
+skinparam Shadowing false
+
+<style>
+activityDiagram {
+  activity {
+    Padding 18
+    LineThickness 1.5
+    FontSize 13
+    Margin 14
+  }
+  diamond {
+    Padding 12
+    Margin 14
+  }
+  arrow {
+    Padding 6
+  }
+}
+</style>
+
+title QUY TRÌNH PHÂN BỔ LEAD & CHỐNG CƯỚP KHÁCH — TECHCORP CRM
+
+start
+
+' ===== KHỞI ĐỘNG =====
+:Hệ thống chạy phân bổ tự động theo lịch định kỳ\nhoặc Trưởng nhóm kích hoạt thủ công;
+
+:Lấy danh sách Lead chưa được phân công\n(chưa có Đội & chưa có Nhân viên phụ trách)\ntrong vòng 7 ngày gần nhất;
+
+' ===== GIAI ĐOẠN 1: KIỂM TRA TRÙNG LẶP =====
+if (Lead trùng email / liên hệ\nvới khách đã có trên hệ thống?) then (CÓ TRÙNG)
+  :Hệ thống tự động gộp vào hồ sơ khách hàng gốc\n→ Loại bỏ bản trùng\n→ Ngăn 2 nhân viên cùng chào 1 khách; <<#FFF3CD>>
+else (KHÔNG TRÙNG)
+  :Lead hợp lệ\n→ Đưa vào hàng chờ phân công; <<#E8F5E9>>
+endif
+
+' ===== GIAI ĐOẠN 2: XÁC ĐỊNH ĐỘI TIẾP NHẬN =====
+if (Lead khớp tiêu chí địa bàn / phân khúc\ncủa Đội bán hàng nào không?) then (KHÔNG KHỚP ĐỘI NÀO)
+  :Giữ nguyên tại Bể Chờ Chung (toàn công ty)\n→ Chưa thuộc về ai\n→ Quản lý cần cấu hình lại tiêu chí\nhoặc phân công tay; <<#FFCDD2>>
+  stop
+else (KHỚP ĐỘI)
+  :Gán Lead cho Đội bán hàng phù hợp\n(theo tiêu chí địa bàn, nguồn lead, phân khúc)\n→ Nhiều đội cùng đủ điều kiện: chọn NGẪU NHIÊN CÓ TRỌNG SỐ\n(Đội dung lượng lớn hơn → xác suất được chọn cao hơn); <<#E1F5FE>>
+endif
+
+' ===== GIAI ĐOẠN 3: PHÂN CÔNG NHÂN VIÊN =====
+:Lọc Nhân viên trong Đội đủ điều kiện hôm nay:\n• Không đang Tạm dừng / Nghỉ phép\n• Còn hạn mức ngày (= Quota tháng ÷ 30);
+
+if (Đội còn nhân viên\nkhả dụng hôm nay?) then (ĐỘI ĐÃ ĐẦY)
+  :Lead giữ trong Bể Chờ của Đội\n(Có đội nhưng chưa có nhân viên cụ thể)\n→ Trưởng nhóm nhận cảnh báo\n→ Điều phối thủ công hoặc đợi ca hôm sau; <<#FFE0B2>>
+  stop
+else (CÒN KHẢ DỤNG)
+  if (Lead khớp lĩnh vực chuyên môn\ncủa nhân viên nào trong đội?) then (CÓ CHUYÊN GIA)
+    :VÒNG 1 — ƯU TIÊN CHUYÊN GIA:\nGán cho Nhân viên có chuyên môn phù hợp nhất\n→ Ưu tiên lead xác suất chốt cao\n→ Tối đa hóa tỷ lệ chuyển đổi; <<#EDE7F6>>
+  else (KHÔNG CÓ CHUYÊN GIA)
+    :VÒNG 2 — XOAY VÒNG CÔNG BẰNG:\nXét toàn bộ thành viên còn hạn mức\n→ Lead cũng sort theo xác suất chốt giảm dần\n→ Xoay lượt công bằng, không ai ôm quá nhiều; <<#E1F5FE>>
+  endif
+
+  :PHÂN CÔNG THÀNH CÔNG:\n1. Nhân viên trở thành Người phụ trách chính\n2. Lead tự động nâng cấp thành Cơ hội\n3. Ghi nhận 1 lead vào hạn mức ngày; <<#C8E6C9>>
+
+  if (Nhân viên còn dưới\nhạn mức ngày?) then (CÒN HẠN MỨC)
+    :Tiếp tục đứng trong\nhàng chờ xoay vòng; <<#E8F5E9>>
+  else (HẾT HẠN MỨC HÔM NAY)
+    :Tạm rút khỏi vòng xoay\n→ Tự động tính lại vào\nngày làm việc tiếp theo; <<#FFECB3>>
+  endif
+
+  stop
+endif
+
+legend bottom right
+  <#ghost>| <b>CHÚ GIẢI VAI TRÒ & Ý NGHĨA NGHIỆP VỤ</b> |
+  |<#E1F5FE>   | Hành động của Hệ thống (Phân bổ Đội & Xoay vòng Round-Robin) |
+  |<#FFF3CD>   | Kiểm soát chất lượng dữ liệu (Gộp trùng, bảo vệ tính nguyên vẹn) |
+  |<#EDE7F6>   | Tối ưu hóa chuyển đổi (Ưu tiên Chuyên gia theo lĩnh vực) |
+  |<#C8E6C9>   | Điểm kết thúc thành công (Lead → Cơ hội, Nhân viên phụ trách rõ ràng) |
+  |<#FFCDD2>   | Cảnh báo quản trị (Bể chờ, cần can thiệp của Trưởng nhóm / Quản lý) |
+endlegend
+
+@enduml

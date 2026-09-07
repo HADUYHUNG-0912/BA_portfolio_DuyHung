@@ -1,0 +1,80 @@
+@startuml
+!theme plain
+skinparam DefaultFontName "Segoe UI", "Noto Sans", Arial, sans-serif
+skinparam TitleFontSize 24
+skinparam TitleFontStyle bold
+skinparam SwimlaneTitleFontSize 22
+skinparam SwimlaneTitleFontStyle bold
+skinparam DefaultFontSize 18
+skinparam ActivityFontSize 18
+skinparam ActivityDiamondFontSize 16
+skinparam ArrowFontSize 15
+skinparam ActivityBorderThickness 2
+skinparam ArrowThickness 2
+skinparam RoundCorner 12
+skinparam Padding 6
+
+title QUY TRÌNH VẬN HÀNH ODOO CRM CHUẨN
+
+|#E8F5E9|Khách hàng|
+|#EDE7F6|Nhân viên Kinh doanh|
+|#E1F5FE|Hệ thống Odoo 19|
+|#FCE4EC|Quản lý Kinh doanh|
+
+|Khách hàng|
+start
+:Gửi yêu cầu tư vấn (Web / Email / Hotline);
+
+|Hệ thống Odoo 19|
+:Tự động tạo Lead & Chấm điểm tiềm năng AI;
+:Phân bổ Lead cho nhân viên theo đội bán hàng;
+
+|Nhân viên Kinh doanh|
+:Tiếp nhận Lead & Gọi điện khảo sát nhu cầu (BANT);
+
+if (Khách có nhu cầu thật?) then (Không - Lead rác)
+  :Đánh dấu Thua (Lost);
+  |Hệ thống Odoo 19|
+  :Lưu trữ Lead (active = False);
+  stop
+else (Có - Tiềm năng)
+  |Nhân viên Kinh doanh|
+  :Bấm Convert to Opportunity (Cột Qualified);
+  :Khảo sát giải pháp & Bấm New Quotation (Tạo Báo giá);
+  :Gửi Báo giá & Kéo sang Proposition (Đàm phán);
+endif
+
+|Hệ thống Odoo 19|
+:AI tự động tính xác suất chốt deal (Probability);
+:Theo dõi thời gian ngâm deal (Rotting Threshold);
+
+if (Deal bị ngâm quá ngưỡng quy định?) then (Có - Ngâm deal)
+  :Đổi màu thẻ Kanban cảnh báo (Rotting indicator);
+  |Quản lý Kinh doanh|
+  :Lọc theo dõi deal ngâm (Filter Rotting) để can thiệp;
+else (Đúng tiến độ)
+endif
+
+|Khách hàng|
+:Xem xét Báo giá & Thỏa thuận hợp đồng;
+
+if (Khách ký hợp đồng / Xác nhận đơn?) then (Đã ký kết)
+  |Nhân viên Kinh doanh|
+  :Bấm Won (Xác nhận Thắng deal);
+  |Hệ thống Odoo 19|
+  :Thực thi BR-WON:\n• Chuyển sang Stage "Won" (is_won = True)\n• Xác suất (probability) = 100%\n• Kích hoạt Đơn bán hàng → Giao hàng & Thu tiền;
+
+
+  stop
+else (Từ chối ký)
+  |Nhân viên Kinh doanh|
+  :Bấm Lost (Chốt thua);
+  :Chọn Lý do thua & Ghi chú giải trình;
+  |Hệ thống Odoo 19|
+  :Đưa xác suất về 0% & Ẩn thẻ (Archive active = False);
+  |Quản lý Kinh doanh|
+  :Xem báo cáo phân tích Lost Analysis định kỳ;
+  stop
+endif
+
+@enduml

@@ -1,0 +1,161 @@
+<mxfile host="65bd71144e">
+    <diagram id="lead-assignment" name="Phân bổ Lead &amp; Chống cướp khách">
+        <mxGraphModel dx="1877" dy="710" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1850" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="QUY TRÌNH PHÂN BỔ LEAD &amp;amp; CHỐNG CƯỚP KHÁCH — TECHCORP CRM" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-38" width="1080" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp_p1" value="GIAI ĐOẠN 1: KIỂM TRA TRÙNG LẶP (DEDUPLICATION)" style="swimlane;startSize=25;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#000000;collapsible=0;rounded=1;arcSize=4;dashed=1;align=left;gradientColor=#7ea6e0;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="280" width="1030" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_lead_hop_le" value="Lead hợp lệ&#10;→ Đưa vào hàng chờ phân công" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p1" vertex="1">
+                    <mxGeometry x="804" y="145" width="210" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_trung_lap" value="Lead trùng email / liên hệ&#10;với khách đã có?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="grp_p1" vertex="1">
+                    <mxGeometry x="386" y="48" width="198" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" value="KHÔNG TRÙNG" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p1" source="dec_trung_lap" target="act_lead_hop_le" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp_p2" value="GIAI ĐOẠN 2: XÁC ĐỊNH ĐỘI TIẾP NHẬN (TEAM ALLOCATION)" style="swimlane;startSize=25;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#000000;collapsible=0;rounded=1;arcSize=4;dashed=1;align=left;gradientColor=#7ea6e0;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="527" width="1031" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_gan_doi" value="Gán Lead cho Đội bán hàng phù hợp&#10;(theo tiêu chí địa bàn, nguồn lead, phân khúc)&#10;→ Nhiều đội đủ điều kiện: NGẪU NHIÊN CÓ TRỌNG SỐ&#10;(Đội dung lượng lớn hơn → xác suất chọn cao hơn)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p2" vertex="1">
+                    <mxGeometry x="650" y="120" width="340" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_khop_doi" value="Lead khớp tiêu chí địa bàn / phân khúc&#10;của Đội bán hàng nào không?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=11;fontStyle=1;fontColor=#000000;" parent="grp_p2" vertex="1">
+                    <mxGeometry x="340" y="35" width="240" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" value="KHỚP ĐỘI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p2" source="dec_khop_doi" target="act_gan_doi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="grp_p3" value="GIAI ĐOẠN 3: PHÂN CÔNG NHÂN VIÊN &amp;amp; QUOTA (MEMBER ASSIGNMENT)" style="swimlane;startSize=25;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#000000;collapsible=0;rounded=1;arcSize=4;dashed=1;align=left;gradientColor=#7ea6e0;" parent="1" vertex="1">
+                    <mxGeometry x="17" y="785" width="1034" height="895" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_thanh_cong" value="PHÂN CÔNG THÀNH CÔNG:&#10;1. Nhân viên trở thành Người phụ trách chính&#10;2. Lead tự động nâng cấp thành Cơ hội&#10;3. Ghi nhận 1 lead vào hạn mức ngày" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="440" y="565" width="340" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_han_muc" value="Nhân viên còn dưới&#10;hạn mức ngày?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="510" y="670" width="200" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_con_han_muc" value="Tiếp tục đứng trong&#10;hàng chờ xoay vòng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="357" y="807" width="190" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_het_han_muc" value="Tạm rút khỏi vòng xoay&#10;→ Tự động tính lại vào&#10;ngày làm việc tiếp theo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="665" y="807" width="220" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="end_success" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#000000;gradientColor=#b3b3b3;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="595" y="860" width="35" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_thanh_cong" target="dec_han_muc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e20" value="CÒN HẠN MỨC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="dec_han_muc" target="act_con_han_muc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e21" value="HẾT HẠN MỨC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="dec_han_muc" target="act_het_han_muc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_con_han_muc" target="end_success" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_het_han_muc" target="end_success" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_vong_1" value="VÒNG 1 — ƯU TIÊN CHUYÊN GIA:&#10;Gán cho Nhân viên có chuyên môn phù hợp nhất&#10;→ Ưu tiên lead xác suất chốt cao&#10;→ Tối đa hóa tỷ lệ chuyển đổi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="250" y="385" width="320" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_vong_1" target="act_thanh_cong" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_vong_2" value="VÒNG 2 — XOAY VÒNG CÔNG BẰNG:&#10;Xét toàn bộ thành viên còn hạn mức&#10;→ Lead cũng sort theo xác suất chốt giảm dần&#10;→ Xoay lượt công bằng, không ai ôm quá nhiều" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="670" y="385" width="290" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_vong_2" target="act_thanh_cong" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_chuyen_gia" value="Lead khớp lĩnh vực chuyên môn&#10;của nhân viên nào trong đội?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="375" y="235" width="267" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="e15" value="CÓ CHUYÊN GIA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="dec_chuyen_gia" target="act_vong_1" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e16" value="KHÔNG CÓ CHUYÊN GIA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="dec_chuyen_gia" target="act_vong_2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_loc_nv" value="Lọc Nhân viên trong Đội đủ điều kiện hôm nay:&#10;• Không đang Tạm dừng / Nghỉ phép&#10;• Còn hạn mức ngày (= Quota tháng ÷ 30)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="421" y="26" width="320" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="end_be_cho_doi" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;gradientColor=#b3b3b3;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="180.5" y="367" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_doi_kha_dung" value="Đội còn nhân viên&#10;khả dụng hôm nay?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="grp_p3" vertex="1">
+                    <mxGeometry x="550" y="125" width="200" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="act_loc_nv" target="dec_doi_kha_dung" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e14" value="CÒN KHẢ DỤNG" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="grp_p3" source="dec_doi_kha_dung" target="dec_chuyen_gia" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="42" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_khoi_dong" value="Hệ thống chạy phân bổ tự động theo lịch định kỳ&#10;hoặc Trưởng nhóm kích hoạt thủ công" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="110" width="280" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_lay_ds" value="Lấy danh sách Lead chưa được phân công&#10;(chưa có Đội &amp;amp; chưa có Nhân viên)&#10;trong 7 ngày gần nhất" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="200" width="280" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_gop_lead" value="Hệ thống tự động gộp vào hồ sơ khách hàng gốc&#10;→ Loại bỏ bản trùng&#10;→ Ngăn 2 nhân viên cùng chào 1 khách" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="405" width="300" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_be_cho_chung" value="Giữ nguyên tại Bể Chờ Chung (toàn công ty)&#10;→ Chưa thuộc về ai&#10;→ Quản lý cấu hình lại tiêu chí hoặc gán tay" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="665" width="280" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="end_be_cho_chung" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="185" y="755" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="act_be_cho_doi" value="Lead giữ trong Bể Chờ của Đội&#10;(Có đội nhưng chưa có nhân viên)&#10;→ Trưởng nhóm nhận cảnh báo&#10;→ Điều phối tay hoặc chờ hôm sau" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#333333;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="995" width="285" height="91" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="start" target="act_khoi_dong" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_khoi_dong" target="act_lay_ds" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_lay_ds" target="dec_trung_lap" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" value="CÓ TRÙNG" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="dec_trung_lap" target="act_gop_lead" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="210" y="373"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_lead_hop_le" target="dec_khop_doi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="KHÔNG KHỚP ĐỘI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="dec_khop_doi" target="act_be_cho_chung" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_be_cho_chung" target="end_be_cho_chung" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_gan_doi" target="act_loc_nv" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" value="ĐỘI ĐÃ ĐẦY" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="dec_doi_kha_dung" target="act_be_cho_doi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;strokeColor=#333333;fontColor=#000000;fontSize=12;labelBackgroundColor=#FFFFFF;" parent="1" source="act_be_cho_doi" target="end_be_cho_doi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
