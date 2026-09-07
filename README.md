@@ -1,4 +1,4 @@
-# HÀ DUY HÙNG - HỒ SƠ NĂNG LỰC BUSINESS ANALYST
+# HÀ DUY HƯNG - HỒ SƠ NĂNG LỰC BUSINESS ANALYST
 
 **Chuyên viên Phân tích Nghiệp vụ | Hệ thống Thông tin Quản lý**  
 Thành phố Hồ Chí Minh | Điện thoại: +84 797 069 812 | Email: haduyhung0912@gmail.com  
