@@ -1,0 +1,31 @@
+flowchart TD
+    subgraph Group_Admin_Action ["1. Thiết lập Cấu hình Nhóm"]
+        G1["Trưởng nhóm bật Tin nhắn tự xóa<br/>cho Nhóm chat (<20 thành viên)"]
+        G2["Group Policy Service<br/>ghi nhận TTL áp dụng"]
+        G1 --> G2
+    end
+
+    subgraph Server_Broadcast ["2. Broadcast & Phân phối Tin nhắn"]
+        G2 --> G3["Thành viên gửi tin nhắn mới"]
+        G3 --> G4["Server đính kèm nhãn TTL + timestamp<br/>vào Message Packet"]
+        G4 --> G5["Broadcast tin nhắn tới tất cả<br/>Active Members trong nhóm"]
+    end
+
+    subgraph Member_Handling ["3. Đồng bộ & Hiển thị trên Thiết bị"]
+        G5 --> M1["Member A (Local SQLite)"]
+        G5 --> M2["Member B (Local SQLite)"]
+        G5 --> M3["Member N (Local SQLite)"]
+    end
+
+    subgraph Lifecycle_Edge_Cases ["4. Xử lý Trường hợp Ngoại lệ (Edge Cases)"]
+        EC1["Thành viên rời nhóm"] -->|"Tin cũ đã nhận"| EC1_Action["Giữ nguyên TTL gốc<br/>Tự xóa khi hết hạn trên máy"]
+        EC2["Thành viên mới gia nhập"] -->|"Lịch sử chat cũ"| EC2_Action["Query Filter: created_at >= join_time<br/>Ẩn 100% tin tự xóa cũ"]
+    end
+
+    subgraph DB_Clean_Daemon ["5. Cơ chế Tự Dọn dẹp (Auto-Purge)"]
+        M1 --> D_Check{"Đồng hồ TTL chạm mốc 0?"}
+        M2 --> D_Check
+        M3 --> D_Check
+        D_Check -->|Đúng| Purge["Background Cleanup Worker:<br/>DELETE FROM messages WHERE id = msg_id"]
+        Purge --> Done((◉ Xóa vĩnh viễn))
+    end

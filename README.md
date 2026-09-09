@@ -86,6 +86,17 @@ Sinh viên năm thứ ba chuyên ngành Hệ thống Thông tin Quản lý với
 
 ---
 
+### 3. Tối Ưu Tính Năng Tin Nhắn Tự Xóa & Bảo Mật Hội Thoại — Zalo
+> 📌 **Chi tiết dự án:** [Xem hồ sơ Case Study Zalo](./zalo/tin_nhan_tu_xoa/README.md)
+
+* **Phạm vi:** Phân tích cơ chế Tin nhắn tự xóa Zalo, đánh giá 8 Business Rules hiện hành, bóc tách 3 Pain Points cốt lõi và đề xuất rào chắn bảo vệ quyền riêng tư toàn diện.
+* **Điểm nhấn giải pháp:**
+  * Mở rộng tính năng tự xóa cho Nhóm chat quy mô nhỏ ($\le 20$ thành viên) với cơ chế phân phối TTL broadcast và lọc lịch sử thành viên mới/cũ.
+  * Bổ sung thang đo thời gian linh hoạt (5 phút cho OTP/thông tin tài chính, 1 giờ cho cuộc trao đổi ngắn) trên nền tảng kiến trúc TTL sẵn có.
+  * Phòng thủ rò rỉ đa tầng (Defense in Depth): Vô hiệu hóa thao tác Sao chép/Chuyển tiếp, kích hoạt `FLAG_SECURE` chặn chụp màn hình trên Android và cơ chế phát hiện cảnh báo trên iOS.
+
+---
+
 ## 📜 Chứng Chỉ Chuyên Môn Quốc Tế
 
 * **Chứng chỉ Chuyên viên Phân tích Nghiệp vụ CNTT** - Nền tảng đào tạo Udemy

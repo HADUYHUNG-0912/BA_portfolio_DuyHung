@@ -1,0 +1,37 @@
+sequenceDiagram
+    autonumber
+    actor Sender as Người gửi (Sender)
+    participant S_App as Zalo App (Sender)
+    participant Server as Zalo Backend Server
+    participant R_App as Zalo App (Receiver)
+    actor Receiver as Người nhận (Receiver)
+
+    Note over Sender,Receiver: Kích hoạt chế độ Tin nhắn Tự xóa trong hội thoại
+    Sender->>S_App: Soạn và gửi tin nhắn nhạy cảm
+    S_App->>Server: SendMessage(payload, is_ephemeral=true, ttl=300s)
+    Server->>R_App: PushMessage(payload, is_ephemeral=true, ttl=300s)
+    
+    rect rgb(240, 248, 255)
+    Note over R_App: Thiết lập rào chắn UI bảo mật
+    R_App->>R_App: Khóa menu Chuyển tiếp (Forward) & Sao chép (Copy)
+    end
+
+    alt Nền tảng Android (Kích hoạt FLAG_SECURE)
+        R_App->>R_App: Window.setFlags(FLAG_SECURE)
+        Receiver->>R_App: Thao tác Chụp màn hình (Power + Vol Down)
+        R_App-->>Receiver: Hệ điều hành chặn chụp (Màn hình đen / Báo lỗi bảo mật)
+    else Nền tảng iOS (Lắng nghe sự kiện chụp màn hình)
+        Receiver->>R_App: Thao tác Chụp màn hình (Side + Vol Up)
+        R_App->>R_App: Bắt sự kiện userDidTakeScreenshotNotification
+        R_App->>Server: EmitSecurityEvent(type=SCREENSHOT_DETECTED, chat_id)
+        Server->>S_App: PushSystemAlert("⚠️ Người nhận vừa chụp màn hình cuộc trò chuyện")
+        Server->>R_App: RenderSystemAlert("⚠️ Bạn vừa chụp ảnh màn hình cuộc trò chuyện này")
+        S_App-->>Sender: Hiển thị cảnh báo trực quan trong khung chat
+    end
+
+    Note over S_App,R_App: Hết hạn TTL (300 giây)
+    par Xóa dữ liệu cục bộ hai phía
+        S_App->>S_App: Xóa bản ghi khỏi Local SQLite người gửi
+    and
+        R_App->>R_App: Xóa bản ghi khỏi Local SQLite người nhận
+    end

@@ -1,0 +1,34 @@
+flowchart TD
+    Start((●)) --> A1["Người dùng kích hoạt<br/>Tin nhắn tự xóa<br/>(1/7/30 ngày hoặc 5p/1h)"]
+    A1 --> A2["Zalo Server ghi nhận<br/>cấu hình hội thoại"]
+    A2 --> A3["Server đồng bộ cấu hình<br/>sang thiết bị người nhận (BR8)"]
+    A3 --> A4["Hiển thị thông báo hệ thống<br/>cho cả 2 bên trong khung chat (BR6)"]
+    A4 --> A5["Người gửi soạn thảo<br/>và bấm gửi tin nhắn"]
+    A5 --> D1{Tin nhắn gửi SAU<br/>khi bật tính năng?}
+
+    D1 -->|Sai: Tin nhắn cũ| A6["Giữ nguyên tin nhắn cũ<br/>KHÔNG áp dụng TTL<br/>(BR4 - Không hồi tố)"]
+    A6 --> End1((◉))
+
+    D1 -->|Đúng| A7["Server gán nhãn TTL<br/>tính từ thời điểm GỬI (BR1)"]
+    A7 --> Fork1{ }
+
+    Fork1 --> A8["Lưu tin nhắn + TTL<br/>vào Local DB người gửi"]
+    Fork1 --> A9["Đẩy tin nhắn + TTL<br/>lưu vào Local DB người nhận"]
+
+    A8 --> Join1{ }
+    A9 --> Join1
+
+    Join1 --> A10["Hiển thị tin nhắn kèm<br/>biểu tượng đồng hồ đếm ngược"]
+    A10 --> D2{Đã hết hạn TTL?}
+
+    D2 -->|Chưa hết hạn| A10
+    D2 -->|Đã hết hạn| Fork2{ }
+
+    Fork2 --> A11["Tự động xóa tin khỏi<br/>Local DB người gửi"]
+    Fork2 --> A12["Tự động xóa tin khỏi<br/>Local DB người nhận"]
+
+    A11 --> Join2{ }
+    A12 --> Join2
+
+    Join2 --> A13["Xác nhận xóa vĩnh viễn<br/>Không hỗ trợ khôi phục (BR7)"]
+    A13 --> End1
