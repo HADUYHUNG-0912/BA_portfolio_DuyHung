@@ -6,12 +6,6 @@
 
 ---
 
-## 🎯 Đánh Giá Nhanh Của Người Phỏng Vấn
-
-Dự án này thể hiện rõ tư duy phân tích nghiệp vụ thực chiến cấp doanh nghiệp. Thay vì chỉ tiếp cận phần mềm theo danh sách tính năng thông thường, ứng viên đi thẳng vào giải quyết các điểm nghẽn quản trị cốt lõi của Ban Giám đốc: chuẩn hóa dòng chảy dữ liệu bán hàng, ngăn chặn lỗi vận hành bằng cơ chế hệ thống, xóa bỏ tranh chấp nội bộ và bảo vệ độ chính xác của dự báo dòng tiền.
-
----
-
 ## 🚀 Những Gì Đã Làm Được
 
 ### 1. Chuẩn hóa và Mô hình hóa Quy trình Nghiệp vụ
