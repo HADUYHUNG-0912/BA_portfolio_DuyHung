@@ -1,0 +1,19 @@
+[BA Case Study] Mổ xẻ nút "Thu hồi tin nhắn" của Zalo: Khi nguyên lý Soft Delete lên ngôi.
+Chào các anh chị, hiện tại em đang bắt đầu chuỗi thử thách tự bóc tách các hệ thống quen thuộc mỗi tuần để rèn luyện tư duy Business Analysis (BA). Tuần này, em chọn phân tích một tính năng ai cũng xài hàng ngày: "Thu hồi tin nhắn" trên Zalo.
+Nhìn giao diện có vẻ đơn giản (bấm giữ -> chọn Thu hồi), nhưng khi mổ xẻ các luồng nghiệp vụ ngầm (Business Rules), hệ thống xử lý bài toán này khéo léo hơn em nghĩ rất nhiều. Dưới đây là 4 quy tắc cốt lõi em rút ra được sau khi test thực tế:
+1. Quyền sở hữu (Authorization) - Chặn ngay từ giao diện
+Logic: Người dùng chỉ được thu hồi tin nhắn do chính họ gửi.
+Cách Zalo xử lý: Hệ thống kiểm tra quyền này ngay tại Client (thiết bị của anh chị). Nếu tin nhắn là của người khác, mục "Thu hồi" hoàn toàn không xuất hiện trong menu ngữ cảnh. Cách thiết kế này giúp giao diện gọn gàng, tránh việc người dùng nhìn thấy một nút bấm mà họ vốn không có quyền sử dụng. (Tất nhiên, ở dưới Backend, Server vẫn giữ một lớp re-validate để phòng chống các Request API giả mạo).
+2. Hợp lệ thời gian (Validation) - Xử lý khéo léo ở Server
+Logic: Lệnh thu hồi chỉ có hiệu lực trong vòng 24 giờ kể từ lúc gửi.
+Cách Zalo xử lý: Khác với quyền sở hữu, nút "Thu hồi" vẫn luôn hiển thị với mọi tin nhắn của anh chị dù đã qua 1 năm. Việc kiểm tra thời gian chỉ thực sự diễn ra ở Server-side sau khi thao tác bấm nút diễn ra. Nếu vi phạm, hệ thống mới trả về một toast thông báo: "Bạn chỉ có thể thu hồi tin nhắn trong vòng 24 giờ".
+Tại sao không ẩn luôn nút nếu quá 24h? Vì nếu làm thế, Client sẽ phải liên tục chạy ngầm đồng hồ đếm ngược cho hàng ngàn tin nhắn để render UI, gây hao pin và tốn tài nguyên máy của người dùng. Việc đẩy logic check thời gian lên Server khi có Request là một quyết định tối ưu hiệu năng rất khôn ngoan.
+3. Đồng bộ trạng thái (Synchronization) - Nguyên lý Soft Delete
+Logic: Dữ liệu không bao giờ biến mất hoàn toàn.
+Cách Zalo xử lý: Khi lệnh thu hồi thành công, Database không hề chạy lệnh DELETE để xóa vật lý, mà chạy lệnh UPDATE Message_Status = 'Recalled'. Trạng thái này lập tức được đẩy (push realtime) về Client của cả hai bên để cập nhật lại giao diện. Đây chính là ứng dụng thực tế của nguyên lý "Xóa mềm" (Soft Delete) ở các hệ thống lớn, giúp giữ lại vết dữ liệu (Log) để phục vụ việc kiểm tra, giải quyết tranh chấp hoặc audit sau này.
+4. Minh bạch & Trải nghiệm (Transparency & UX)
+Thay vì để lại một khoảng trống khó hiểu, Zalo thay thế bằng Tombstone (Dấu vết): "Tin nhắn đã được thu hồi".
+Điểm "ăn tiền" nhất về UX: Ở phía người thu hồi, Zalo tinh tế gắn thêm icon cây bút chì (✏️). Họ hiểu Insight người dùng: Thu hồi thường là do gõ sai chữ hoặc thiếu ý. Bấm vào icon này, nội dung cũ lập tức hiện lại trên khung chat để anh chị sửa nhanh và gửi lại, tiết kiệm rất nhiều công sức gõ phím!
+📌 (Hình ảnh Sequence Diagram mô tả dòng chảy dữ liệu em để ở dưới nhé)
+Bài viết này cũng là "phát súng" đầu tiên mở màn cho chuỗi "Reverse Engineering - Phân tích hệ thống hàng tuần" của em. Vì phân tích qua quan sát từ bên ngoài nên chắc chắn sẽ có những góc nhìn chưa hoàn thiện hoặc thiếu sót. Rất mong các anh chị đi trước comment trao đổi, góp ý và bổ sung thêm thông tin dưới phần bình luận để em cũng như mọi người cùng học hỏi ạ.
+#BusinessAnalysis #SystemAnalysis #ReverseEngineering #Zalo #ProductMindset

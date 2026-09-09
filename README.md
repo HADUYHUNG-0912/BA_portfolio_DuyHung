@@ -97,6 +97,17 @@ Sinh viên năm thứ ba chuyên ngành Hệ thống Thông tin Quản lý với
 
 ---
 
+### 4. Phân Tích Tính Năng Thu Hồi Tin Nhắn & Nguyên Lý Soft Delete — Zalo
+> 📌 **Chi tiết dự án:** [Xem hồ sơ Case Study Thu Hồi Tin Nhắn](./zalo/thu_hoi_tin_nhan/README.md)
+
+* **Phạm vi:** Bóc tách 4 Business Rules ẩn sau nút "Thu hồi" (Authorization, Time Validation 1 giờ, Soft Delete, UX Tombstone), phân tích 2 Pain Points bằng 5 Whys và đề xuất cải tiến trải nghiệm người dùng.
+* **Điểm nhấn giải pháp:**
+  * Xác nhận giới hạn thực tế là **1 giờ** — kiểm chứng thực nghiệm đối soát với help.zalo.me, đính chính nhầm lẫn phổ biến về "24 giờ".
+  * Phân tích Defense-in-Depth 2 lớp: Client-side (ẩn nút với tin người khác) + Server-side re-validation (chống API giả mạo).
+  * Giải thích nguyên lý Soft Delete thực tế và cơ chế WebSocket Push đồng bộ Tombstone realtime đến tất cả thiết bị.
+
+---
+
 ## 📜 Chứng Chỉ Chuyên Môn Quốc Tế
 
 * **Chứng chỉ Chuyên viên Phân tích Nghiệp vụ CNTT** - Nền tảng đào tạo Udemy

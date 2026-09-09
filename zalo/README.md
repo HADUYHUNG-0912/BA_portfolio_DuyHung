@@ -14,4 +14,12 @@ Thư mục lưu trữ các hồ sơ phân tích nghiệp vụ và nghiên cứu 
 
 ---
 
+### [Phan Tich Tinh Nang Thu Hoi Tin Nhan & Nguyen Ly Soft Delete](./thu_hoi_tin_nhan/README.md)
+* **Phan he:** Message Recall / State Management
+* **Trong tam:** Boc tach 4 Business Rules an sau nut "Thu hoi" (Authorization, Validation 1 gio, Soft Delete, UX Tombstone), xac dinh Pain Points nguoi dung va de xuat 4 cai tien trai nghiem.
+* **Ket qua:** 4 Business Rules, 2 Pain Points phan tich 5 Whys, 4 Business Requirements de xuat, 3 so do ky thuat (Flowchart, Sequence, State Diagram), Bo nguon doi chieu 3 tang.
+* 👉 **[Xem toan van Case Study](./thu_hoi_tin_nhan/README.md)**
+
+---
+
 > ⬅️ **Quay lại trang hồ sơ cá nhân:** [Trang chủ Portfolio](../README.md)
