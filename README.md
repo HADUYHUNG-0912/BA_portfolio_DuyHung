@@ -63,30 +63,26 @@ Sinh viên năm thứ ba chuyên ngành Hệ thống Thông tin Quản lý với
 
 ---
 
-## 🌟 Dự Án Tiêu Biểu: Nghiên Cứu & Tư Vấn Giải Pháp Odoo ERP
+## 🌟 Dự Án Phân Tích Nghiệp Vụ Tiêu Biểu (Featured Case Studies)
 
-> 📌 **Truy cập tài liệu dự án chi tiết:** [Khám phá thư mục Odoo ERP](./odoo/)
+### 1. Phân Tích Nghiệp Vụ & Tối Ưu Vận Hành Bán Hàng — Odoo ERP 19
+> 📌 **Chi tiết dự án:** [Xem hồ sơ Case Study Odoo ERP](./odoo/README.md)
 
-Dự án phân tích nghiệp vụ chuyên sâu về phân hệ Quản trị quan hệ khách hàng và Tối ưu hóa chu trình bán hàng trên nền tảng Odoo 19:
+* **Phạm vi:** Tái cấu trúc chu trình Lead-to-Order, thiết lập 14 quy tắc nghiệp vụ Poka-Yoke và giải quyết 3 bài toán cấp điều hành.
+* **Điểm nhấn giải pháp:**
+  * Kỷ luật Kanban SLA 14 ngày & rào chắn kỹ thuật bắt buộc phân loại lý do thất bại.
+  * Thuật toán phân bổ tự động Round-Robin, kiểm soát quota 5 lead/ngày và kỹ thuật che dữ liệu (Data Masking) chống cướp khách nội bộ.
+  * Kiến trúc Doanh thu kép (One-off & MRR), cờ cảnh báo cơ hội trôi dạt và báo cáo Pivot đa chiều bảo vệ thanh khoản dòng tiền cho CFO.
 
-```
-odoo/
-├── README.md                      # Báo cáo đánh giá tổng quan từ góc nhìn người phỏng vấn
-├── diagram/                       # Bộ sơ đồ quy trình nghiệp vụ độ nét cao dạng PNG
-│   ├── CRM_Lead_To_Order_Swimlane_Process.png
-│   ├── CRM_Auto_Assignment_Anti_Poaching_Flow.png
-│   └── CRM_System_Use_Case_Overview.png
-└── doc/                           # Hồ sơ đặc tả 14 quy tắc nghiệp vụ và tổng hợp tình huống thực chiến
-    ├── Case_Study_Odoo.md         # Bản tổng hợp 3 tình huống nghiệp vụ thực chiến cấp doanh nghiệp
-    └── Business_Rules_Analysis.md # Cẩm nang 14 quy tắc nghiệp vụ doanh nghiệp
-```
+---
 
-### 3 Điểm Nhấn Nghiệp Vụ Cốt Lõi Được Giải Quyết:
-1. **Dập tắt tình trạng ngâm cơ hội bán hàng:** Thiết lập mốc cảnh báo đổi màu trực quan sau 14 ngày trên bảng Kanban và áp dụng cơ chế Poka-Yoke khóa thao tác nếu không điền lý do thua chuẩn hóa.
-2. **Xóa bỏ tranh chấp và chống cướp khách nội bộ:** Thiết kế thuật toán phân bổ xoay vòng tự động kèm hạn mức 5 lead mỗi ngày và triển khai giải pháp che dữ liệu liên hệ kết hợp phân quyền 3 cấp.
-3. **Chính xác hóa dự báo dòng tiền cho cấp điều hành:** Tách biệt độc lập doanh thu bán đứt một lần và doanh thu định kỳ hàng tháng, kích hoạt cờ cảnh báo tự động khi phát hiện cơ hội bị dời ngày chốt từ 2 lần trở lên.
+### 2. Tối Ưu Hệ Thống Khách Hàng Thân Thiết & Gamification — Shopee Rewards
+> 📌 **Chi tiết dự án:** [Xem hồ sơ Case Study Shopee Rewards](./Shopee%20rewards/README.md)
 
-👉 **[Đọc toàn bộ hồ sơ đánh giá và sơ đồ quy trình tại thư mục Odoo](./odoo/)**
+* **Phạm vi:** Phân tích nghiệp vụ chương trình Loyalty Shopee Rewards, bóc tách 10 Business Rules và giải quyết 2 khoảng trống hành vi gây tổn thất doanh thu.
+* **Điểm nhấn giải pháp:**
+  * Giải quyết điểm nghẽn cận ngưỡng (Near-threshold Drop): Thiết kế logic theo dõi khoảng cách ngưỡng và 3 điểm chạm kích hoạt mua sắm (Loyalty page, Checkout, Homepage card).
+  * Khắc phục khoảng trống động lực giữa chu kỳ (Mid-cycle Motivation Gap): Thiết kế cơ chế "Chuỗi mua sắm thưởng thêm" (Post-tier Milestone Bonus) duy trì tần suất mua sắm sau khi đạt hạng.
 
 ---
 
