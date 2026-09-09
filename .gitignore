@@ -11,3 +11,8 @@ temp_*
 .idea/
 .DS_Store
 Thumbs.db
+
+# External source & local packages
+odoo_framework_source/
+diagram-skills-package/
+
