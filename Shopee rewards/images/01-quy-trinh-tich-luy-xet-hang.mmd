@@ -1,0 +1,36 @@
+flowchart TD
+    A([👤 Người dùng Shopee]) --> B[Tự động tham gia Shopee Rewards\nBR-02: Mọi user kể từ 01/2021]
+
+    B --> C{Đặt đơn hàng}
+
+    C -->|Shopee thường| D[Kiểm tra loại đơn\nBR-10]
+    C -->|ShopeeFood từ Quán Đối tác\nBR-03 — tính từ 01/2022| D
+
+    D -->|❌ Đơn KHÔNG hợp lệ| E[Không tính vào tích lũy]
+    E --> E1["• Voucher & Dịch vụ\n• Nạp Đấu thầu từ khóa\n• Vi phạm chính sách Shopee\n• Giao không thành công / trả hàng"]
+
+    D -->|✅ Đơn hợp lệ| F[Giao hàng thành công]
+    F --> G[Cộng vào tích lũy chu kỳ\n— số đơn + chi tiêu —]
+
+    G --> H{Hệ thống kiểm tra\nngưỡng hạng — BR-08\ntự động, real-time}
+
+    H -->|Chưa đủ ngưỡng nào| I[Giữ hạng Thành viên]
+    H -->|≥ 3 đơn AND ≥ 1.000.000đ\nBR-05 | J[⬆️ Thăng hạng BẠC]
+    H -->|≥ 20 đơn AND ≥ 5.000.000đ\nBR-06| K[⬆️ Thăng hạng VÀNG]
+    H -->|≥ 75 đơn AND ≥ 15.000.000đ\nBR-07| L[⬆️ Thăng hạng KIM CƯƠNG]
+
+    I & J & K & L --> M[Hạng được bảo lưu\nsuốt chu kỳ — BR-09]
+
+    M --> N{Kết thúc chu kỳ 6 tháng?\nBR-04: 30/06 hoặc 31/12}
+
+    N -->|Chưa| C
+    N -->|Có — bắt đầu chu kỳ mới| O[Reset số đơn & chi tiêu về 0\nBR-04]
+    O --> P[Hạng kỳ trước được 'mang sang'\nlàm hạng khởi điểm — BR-09]
+    P --> C
+
+    style A fill:#FF6033,color:#fff
+    style J fill:#C0C0C0,color:#000
+    style K fill:#FFD700,color:#000
+    style L fill:#B9F2FF,color:#000
+    style E fill:#FF4444,color:#fff
+    style F fill:#44BB44,color:#fff
